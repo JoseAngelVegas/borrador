@@ -11,14 +11,25 @@
 .Letrero {
 color: white;
 text-align: center;
-    margin: 0;
-  position: relative;
-  top: 50%;
-  font-size: 50px;
+margin: 0;
+position: relative;
+top: 50%;
+font-size: 50px;
+Animation: animacionDeInput 8s;
+animation-fill-mode: both;
+
 }
   
    body {
        background-color: black;
+       }
+       
+          @keyframes animacionDeInput {
+     0% {font-size: 45px; opacity: 0%}
+     20% {font-size: 48px; opacity: 100%}
+     100% {font-size: 50px; opacity: 100%}
+       
+    }
 </style>
 
 </head>
