@@ -4,7 +4,7 @@
 
 <head>
 
-<p class="Letrero"> En una hermosa y creativa aldea, vive alguien con un hiperfoco: Print… </p>
+<p class="Letrero" id="Letrero1"> En una hermosa y creativa aldea, vive alguien con un hiperfoco: Print… </p>
 
 <style>
 
@@ -14,11 +14,15 @@ text-align: center;
 margin: 0;
 position: relative;
 top: 50%;
-font-size: 50px;
-Animation: animacionDeInput 8s;
+
+}
+
+#Letrero1 {
+Animation: animacionDeInput 3.5s;
 animation-fill-mode: both;
 
 }
+
   
    body {
        background-color: black;
@@ -27,9 +31,11 @@ animation-fill-mode: both;
           @keyframes animacionDeInput {
      0% {font-size: 45px; opacity: 0%}
      20% {font-size: 48px; opacity: 100%}
-     100% {font-size: 50px; opacity: 100%}
+     90% {font-size: 50px; opacity: 100%}
+     100% {font-size: 48px; opacity: 0%}
        
     }
+    
 </style>
 
 </head>
