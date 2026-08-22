@@ -10,7 +10,7 @@
 
 <p class="Boton" id="saltar" onclick="saltarIntroduccion()"> Saltar </p>
 
-<p class="Letrero" id="Letrero1"></p>
+<p id="Letrero"> Estos son los libros que recuerda. </p>
 
 <script>
 
@@ -21,7 +21,7 @@ document.getElementById("saltar").style.padding = "0px";
 document.getElementById("Introduccion").style.width = "0%";
 document.getElementById("Introduccion").style.height = "0%";
 
-
+document.getElementById("Letrero").style.animationPlayState = "running";
 
 }
 
@@ -30,31 +30,48 @@ document.getElementById("Introduccion").style.height = "0%";
 
 <style>
 
+  body {
+       background-color: white;
+}
+
   #Introduccion {
-position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}     
+      
+  #Saltar {
+  position: relative;
+  background-color: yellow;
+  padding: 5px;
+  text-align: center;
+  justify-self: end;
+  top: 500px;
+  width: 200px;
+  font-size: 50px;
 }
+
+  #Letrero {
+  animation-play-state: paused;
+  position: relative;
+  animation: AnimacionLetrero 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  text-align: center;
+  }
   
-   body {
-       background-color: white;
-       }
-      
-      
-     #Saltar {
-     position: relative;
-     background-color: yellow;
-     padding: 5px;
-     text-align: center;
-     justify-self: end;
-     top: 500px;
-     width: 200px;
-     font-size: 50px;
+
+  
+  @keyframes AnimacionLetrero {
+  0% {opacity: 0%; font-Size: 0px;}
+  100% {opacity: 100%; font-Size: 30px;}
 }
+
+  
     
 </style>
 
@@ -62,5 +79,4 @@ position: absolute;
 
 </body>
 
-  
 </html>
