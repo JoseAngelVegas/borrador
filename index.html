@@ -56,6 +56,9 @@ document.getElementById("Letrero").style.animationPlayState = "running";
   top: 500px;
   width: 200px;
   font-size: 50px;
+  animation: SaltarSoloBoton 15s;
+  animation-play-state: running;
+  animation-fill-mode: both;
 }
 
   #Letrero {
@@ -76,6 +79,12 @@ document.getElementById("Letrero").style.animationPlayState = "running";
   0% {opacity: 100%; width: 100%; height: 100%;}
   95% {opacity: 100%; width: 100%; height: 100%;}
   100% {opacity: 0%; width: 0%; height: 0%;}
+}
+
+   @keyframes SaltarSoloBoton {
+  0% {opacity: 100%; padding: 5px; fontSize: 50px;}
+  95% {opacity: 100%; padding: 5px; fontSize: 50px;}
+  100% {opacity: 0%; padding: 0px; fontSize: 0px;}
 }
 
   
