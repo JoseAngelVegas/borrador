@@ -33,6 +33,9 @@ document.getElementById("saltar").style.animation = "SaltarSolo2 2s";
 
 document.getElementById("Letrero").style.animationPlayState = "running";
 
+document.getElementById("Libro1").style.animationPlayState = "running";
+
+
 }
 
 
@@ -90,9 +93,28 @@ document.getElementById("Letrero").style.animationPlayState = "running";
   top: -100px;
   }
   
+  #Libro1 {
+  animation-play-state: paused;
+  position: relative;
+  animation: Libro 0.7s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  }
+  
+  .Libro {
+        margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+}
+  
 @keyframes AnimacionLetrero {
   0% {opacity: 0%; font-Size: 0px;}
   100% {opacity: 100%; font-Size: 30px;}
+}
+
+@keyframes Libro {
+  0% {opacity: 0%; width: 0px; height: 0px;}
+  100% {opacity: 100%;  width: 115px; height: 155px;}
 }
   
   @keyframes SaltarSolo {
