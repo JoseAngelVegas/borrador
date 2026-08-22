@@ -12,6 +12,8 @@
 
 <p id="Letrero"> Estos son los libros que recuerda. </p>
 
+<p id="Letrero2"> Estos son los libros que recuerda. </p>
+
 <script>
 
 function saltarIntroduccion() {
@@ -69,6 +71,15 @@ document.getElementById("Letrero").style.animationPlayState = "running";
   animation-fill-mode: both;
   text-align: center;
   }
+
+   #Letrero2 {
+  animation-play-state: paused;
+  position: relative;
+  animation: AnimacionLetrero2 15.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  text-align: center;
+  }
   
 @keyframes AnimacionLetrero {
   0% {opacity: 0%; font-Size: 0px;}
@@ -85,6 +96,12 @@ document.getElementById("Letrero").style.animationPlayState = "running";
   0% {opacity: 100%; padding: 5px; fontSize: 50px;}
   95% {opacity: 100%; padding: 5px; fontSize: 50px;}
   100% {opacity: 0%; padding: 0px; fontSize: 0px;}
+}
+
+  @keyframes AnimacionLetrero2 {
+   0% {opacity: 0%; font-Size: 0px;}
+  95% {opacity: 0%; font-Size: 0px;}
+  100% {opacity: 100%; font-Size: 30px;}
 }
 
   
