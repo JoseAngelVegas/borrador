@@ -42,6 +42,9 @@ document.getElementById("Letrero").style.animationPlayState = "running";
   height: 100%;
   object-fit: cover;
   object-position: center;
+  animation: SaltarSolo 18s;
+  animation-play-state: running;
+  animation-fill-mode: both;
 }     
       
   #Saltar {
@@ -64,11 +67,14 @@ document.getElementById("Letrero").style.animationPlayState = "running";
   text-align: center;
   }
   
-
-  
-  @keyframes AnimacionLetrero {
+@keyframes AnimacionLetrero {
   0% {opacity: 0%; font-Size: 0px;}
   100% {opacity: 100%; font-Size: 30px;}
+}
+  
+  @keyframes SaltarSolo {
+  0% {opacity: 100%; width: 100%; height: 100%;}
+  100% {opacity: 0%; width: 0%; height: 0%;}
 }
 
   
