@@ -14,6 +14,15 @@
 
 <p id="Letrero2"> Este es el único libro que recuperó Print. </p>
 
+<p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
+
+<p class="CositasMas" id="TerminosYCondiciones2"> Términos y Condiciones. </p>
+
+<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
+
+<p class="CositasMas" id="PoliticaDePrivacidad2"> Política de privacidad. </p>
+
+
 <img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
 
 <img class="Libro" id="Libro2" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
@@ -39,6 +48,11 @@ document.getElementById("saltar").style.animation = "SaltarSolo2 2s";
 document.getElementById("Letrero").style.animationPlayState = "running";
 
 document.getElementById("Libro1").style.animationPlayState = "running";
+
+document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
+
+document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
+
 
 
 }
@@ -105,7 +119,6 @@ document.getElementById("Libro1").style.animationPlayState = "running";
   animation-play-state: paused;
   animation-fill-mode: both;
   transform: translateY(105%);
-
   }
 
   #Libro2 {
@@ -117,10 +130,46 @@ document.getElementById("Libro1").style.animationPlayState = "running";
   transform: translateY(50%);
   }
   
+   #TerminosYCondiciones {
+  animation-play-state: paused;
+  position: relative;
+  animation: CositasMas 0.8s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  }
+  
+   #TerminosYCondiciones2 {
+  animation-play-state: paused;
+  position: relative;
+  animation: CositasMas 0.8s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  }
+  
+   #PoliticaDePrivacidad {
+  animation-play-state: paused;
+  position: relative;
+  animation: CositasMas 0.8s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  }
+  
+   #PoliticaDePrivacidad2 {
+  animation-play-state: paused;
+  position: relative;
+  animation: CositasMas 0.8s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  }
+  
   .Libro {
-        margin: 0 auto;
+      margin: 0 auto;
      display: flex;
      flex-direction: column;
+}
+
+.CositasMas {
+text-align: center;
 }
   
 @keyframes AnimacionLetrero {
@@ -143,6 +192,11 @@ document.getElementById("Libro1").style.animationPlayState = "running";
   0% {opacity: 0%; width: 0px; height: 0px;}
   95% {opacity: 0%; width: 0px; height: 0px;}
   100% {opacity: 100%;  width: 115px; height: 155px;}
+}
+
+@keyframes CositasMas {
+  0% {opacity: 0%; fontSize: 0px;}
+  100% {opacity: 100%; fontSize: 20px;}
 }
   
   @keyframes SaltarSolo {
