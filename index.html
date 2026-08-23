@@ -216,6 +216,11 @@ text-align: center;
   100% {opacity: 100%; fontSize: 20px; transform: translateY(5700%);}
 }
 
+@keyframes CositasMasCelular {
+  0% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
+  100% {opacity: 100%; fontSize: 50px; transform: translateY(5700%);}
+}
+
 @keyframes CositasMas2 {
  0% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
   95% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
@@ -253,6 +258,22 @@ text-align: center;
    #Libro1 {
   position: relative;
   animation: LibroCelular 0.7s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  transform: translateY(105%);
+}
+
+#TerminosYCondiciones {
+  position: relative;
+  animation: CositasMasCelular 0.7s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  transform: translateY(105%);
+}
+
+#PoliticaDePrivacidad {
+  position: relative;
+  animation: CositasMasCelular 0.7s;
   animation-play-state: paused;
   animation-fill-mode: both;
   transform: translateY(105%);
