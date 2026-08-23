@@ -35,6 +35,7 @@ document.getElementById("TerminosYCondiciones").style.animationPlayState = "runn
 
 document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
 
+  document.getElementById("Introduccion").style.animation = "SaltarIntroduccion 1s";
 
 }
 
@@ -123,6 +124,11 @@ text-align: center;
 .CositasMas2 {
 text-align: center;
 }
+
+   @keyframes SaltarIntroduccion {
+  0% {opacity: 100%; width: 100%; height: 100%;}
+  95% {opacity: 100%; width: 100%; height: 100%;}
+  100% {opacity: 0%; width: 0%; height: 0%;}
   
 @keyframes AnimacionLetrero {
   0% {opacity: 0%; font-size:: 0px;}
