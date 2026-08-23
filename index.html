@@ -130,9 +130,33 @@ text-align: center;
   95% {opacity: 100%; width: 100%; height: 100%;}
   100% {opacity: 0%; width: 0%; height: 0%;}
   
+  }
+  
 @keyframes AnimacionLetrero {
   0% {opacity: 0%; font-size:: 0px;}
   100% {opacity: 100%; font-size: 50px;}
+}
+
+@keyframes Libro {
+  0% {opacity: 0%; width: 0px; height: 0px;}
+  100% {opacity: 100%;  width: 115px; height: 155px;}
+}
+
+@keyframes CositasMas {
+  0% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
+  100% {opacity: 100%; fontSize: 20px; transform: translateY(5700%);}
+}
+
+
+ @keyframes SaltarBoton {
+  0% {opacity: 100%; width: 120px; height: 70px; padding: 5px;   justify-self: end; font-size: 50px;}
+  100% {opacity: 0%; width: 0px; height: 0px; padding: 0px; justify-self: end; font-size: 0px;}
+ 
+}
+
+@keyframes LibroCelular {
+  0% {opacity: 0%; width: 0px; height: 0px;}
+  100% {opacity: 100%;  width: 315px; height: 405px;}
 }
 
 @keyframes AnimacionLetreroCelular {
@@ -141,40 +165,20 @@ text-align: center;
 }
 
 
-@keyframes Libro {
-  0% {opacity: 0%; width: 0px; height: 0px;}
-  100% {opacity: 100%;  width: 115px; height: 155px;}
-}
-
-@keyframes LibroCelular {
-  0% {opacity: 0%; width: 0px; height: 0px;}
-  100% {opacity: 100%;  width: 315px; height: 405px;}
-}
-
  
-
-
-@keyframes CositasMas {
-  0% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
-  100% {opacity: 100%; fontSize: 20px; transform: translateY(5700%);}
-}
 
 @keyframes CositasMasCelular {
  0% { opacity: 0%; font-size: 0px; transform: translateY(105%);}  
  100% { opacity: 100%; font-size: 50px; transform: translateY(5000%);}
  }
-  
-  @keyframes SaltarBoton {
-  0% {opacity: 100%; width: 120px; height: 70px; padding: 5px;   justify-self: end;}
-  100% {opacity: 0%; width: 0px; height: 0px; padding: 0px; justify-self: end;}
-}
+ 
 
 
     @media only screen and (max-width:1400px) {
     
     #Letrero {
   position: relative;
-  animation: AnimacionLetreroCelular 0.5s;
+  animation: AnimacionLetrero 0.5s;
   animation-play-state: paused;
   animation-fill-mode: both;
   text-align: center;
@@ -185,7 +189,7 @@ text-align: center;
     
    #Libro1 {
   position: relative;
-  animation: LibroCelular 0.7s;
+  animation: Libro 0.7s;
   animation-play-state: paused;
   animation-fill-mode: both;
   transform: translateY(105%);
@@ -195,7 +199,7 @@ text-align: center;
 
 #TerminosYCondiciones {
   position: relative;
-  animation: CositasMasCelular 0.8s;
+  animation: CositasMas 0.8s;
   animation-play-state: paused;
   animation-fill-mode: both;
   
@@ -203,7 +207,7 @@ text-align: center;
 
 #PoliticaDePrivacidad {
   position: relative;
-  animation: CositasMasCelular 0.8s;
+  animation: CositasMas 0.8s;
   animation-play-state: paused;
   animation-fill-mode: both;
 }
