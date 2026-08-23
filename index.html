@@ -186,7 +186,7 @@ text-align: center;
 
 @keyframes AnimacionLetreroCelular {
   0% {opacity: 0%; font-Size: 0px;}
-  100% {opacity: 100%; font-Size: 100px;}
+  100% {opacity: 100%; font-Size: 70px;}
 }
 
    @keyframes AnimacionLetrero2 {
@@ -242,18 +242,18 @@ text-align: center;
     @media only screen and (max-width:1400px) {
     
     #Letrero {
-  animation-play-state: paused;
   position: relative;
   animation: AnimacionLetreroCelular 0.5s;
+  animation-play-state: paused;
   animation-fill-mode: both;
   text-align: center;
   
   }
     
    #Libro1 {
-  animation-play-state: paused;
   position: relative;
   animation: LibroCelular 0.7s;
+  animation-play-state: paused;
   animation-fill-mode: both;
   transform: translateY(105%);
 }
