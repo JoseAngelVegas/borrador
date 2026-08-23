@@ -195,6 +195,12 @@ text-align: center;
   100% {opacity: 100%; font-Size: 30px;}
 }
 
+@keyframes AnimacionLetrero2Celular {
+   0% {opacity: 0%; font-Size: 0px;}
+  95% {opacity: 0%; font-Size: 0px;}
+  100% {opacity: 100%; font-Size: 70px;}
+}
+
 @keyframes Libro {
   0% {opacity: 0%; width: 0px; height: 0px;}
   100% {opacity: 100%;  width: 115px; height: 155px;}
@@ -265,6 +271,15 @@ text-align: center;
   text-align: center;
   
   }
+  
+  #Letrero2 {
+  position: relative;
+  animation: AnimacionLetrero2Celular 15.5s;
+  animation-play-state: running;
+  animation-fill-mode: both;
+  text-align: center;
+  top: -100px;
+  }
     
    #Libro1 {
   position: relative;
@@ -276,10 +291,10 @@ text-align: center;
 
   #Libro2 {
   position: relative;
-  animation: Libro2Celular 0.7s;
-  animation-play-state: paused;
+  animation: Libro2Celular 15.6s;
+  animation-play-state: running;
   animation-fill-mode: both;
-  transform: translateY(105%);
+  transform: translateY(50%);
 }
 
 #TerminosYCondiciones {
@@ -290,10 +305,24 @@ text-align: center;
   
 }
 
+#TerminosYCondiciones2 {
+  position: relative;
+  animation: CositasMas2Celular 15.7s;
+  animation-play-state: running;
+  animation-fill-mode: both;
+}
+
 #PoliticaDePrivacidad {
   position: relative;
   animation: CositasMasCelular 0.8s;
   animation-play-state: paused;
+  animation-fill-mode: both;
+}
+
+#PoliticaDePrivacidad2 {
+   position: relative;
+  animation: CositasMas2Celular 15.7s;
+  animation-play-state: running;
   animation-fill-mode: both;
 }
 
