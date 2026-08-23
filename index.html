@@ -184,6 +184,11 @@ text-align: center;
   100% {opacity: 100%; font-Size: 30px;}
 }
 
+@keyframes AnimacionLetreroCelular {
+  0% {opacity: 0%; font-Size: 0px;}
+  100% {opacity: 100%; font-Size: 100px;}
+}
+
    @keyframes AnimacionLetrero2 {
    0% {opacity: 0%; font-Size: 0px;}
   95% {opacity: 0%; font-Size: 0px;}
@@ -236,15 +241,22 @@ text-align: center;
 
     @media only screen and (max-width:1400px) {
     
+    #Letrero {
+  animation-play-state: paused;
+  position: relative;
+  animation: AnimacionLetreroCelular 0.5s;
+  animation-fill-mode: both;
+  text-align: center;
+  
+  }
+    
    #Libro1 {
   animation-play-state: paused;
   position: relative;
   animation: LibroCelular 0.7s;
-  animation-play-state: paused;
   animation-fill-mode: both;
   transform: translateY(105%);
 }
-
 
 
 }
