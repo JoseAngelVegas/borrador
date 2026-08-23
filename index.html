@@ -14,19 +14,18 @@
 
 <p id="Letrero2"> Este es el único libro que recuperó Print. </p>
 
-<p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
-
-<p class="CositasMas" id="TerminosYCondiciones2"> Términos y Condiciones. </p>
-
-<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
-
-<p class="CositasMas" id="PoliticaDePrivacidad2"> Política de privacidad. </p>
-
 
 <img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
 
 <img class="Libro" id="Libro2" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
 
+<p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
+
+<p class="CositasMas2" id="TerminosYCondiciones2"> Términos y Condiciones. </p>
+
+<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
+
+<p class="CositasMas2" id="PoliticaDePrivacidad2"> Política de privacidad. </p>
 
 <script>
 
@@ -53,6 +52,13 @@ document.getElementById("TerminosYCondiciones").style.animationPlayState = "runn
 
 document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
 
+
+
+
+
+document.getElementById("TerminosYCondiciones2").style.animationPlayState = "paused";
+
+document.getElementById("PoliticaDePrivacidad2").style.animationPlayState = "paused";
 
 
 }
@@ -131,7 +137,6 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
   }
   
    #TerminosYCondiciones {
-  animation-play-state: paused;
   position: relative;
   animation: CositasMas 0.8s;
   animation-play-state: paused;
@@ -139,15 +144,13 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
   }
   
    #TerminosYCondiciones2 {
-  animation-play-state: paused;
   position: relative;
-  animation: CositasMas 0.8s;
-  animation-play-state: paused;
+  animation: CositasMas2 15.7s;
+  animation-play-state: running;
   animation-fill-mode: both;
   }
   
    #PoliticaDePrivacidad {
-  animation-play-state: paused;
   position: relative;
   animation: CositasMas 0.8s;
   animation-play-state: paused;
@@ -155,10 +158,9 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
   }
   
    #PoliticaDePrivacidad2 {
-  animation-play-state: paused;
   position: relative;
-  animation: CositasMas 0.8s;
-  animation-play-state: paused;
+  animation: CositasMas2 15.7s;
+  animation-play-state: running;
   animation-fill-mode: both;
   }
   
@@ -170,6 +172,20 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
 
 .CositasMas {
 text-align: center;
+  transform: translateY(15800%);
+
+}
+
+.CositasMas2 {
+text-align: center;
+  transform: translateY(1200%);
+
+}
+
+.mi-elemento {
+  scrollbar-width: thin; 
+  
+  scrollbar-color: #ff5722 #f1f1f1; 
 }
   
 @keyframes AnimacionLetrero {
@@ -197,6 +213,12 @@ text-align: center;
 @keyframes CositasMas {
   0% {opacity: 0%; fontSize: 0px;}
   100% {opacity: 100%; fontSize: 20px;}
+}
+
+@keyframes CositasMas2 {
+ 0% {opacity: 0%; fontSize: 0px;}
+  95% {opacity: 0%; fontSize: 0px;}
+  100% {opacity: 100%;  fontSize: 20px;}
 }
   
   @keyframes SaltarSolo {
