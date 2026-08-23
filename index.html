@@ -211,19 +211,31 @@ text-align: center;
   100% {opacity: 100%;  width: 115px; height: 155px;}
 }
 
+@keyframes Libro2Celular {
+  0% {opacity: 0%; width: 0px; height: 0px;}
+  95% {opacity: 0%; width: 0px; height: 0px;}
+  100% {opacity: 100%;  width: 315px; height: 405px;}
+}
+
 @keyframes CositasMas {
   0% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
   100% {opacity: 100%; fontSize: 20px; transform: translateY(5700%);}
 }
 
 @keyframes CositasMasCelular {
- 0% { opacity: 0%; font-size: 0px; transform: translateY(105%);}  
- 100% { opacity: 100%; font-size: 50px; transform: translateY(5700%);} }
+ 0% { opacity: 0%; fontSize: 0px; transform: translateY(105%);}  
+ 100% { opacity: 100%; fontSize: 50px; transform: translateY(5700%);} }
 
 @keyframes CositasMas2 {
  0% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
   95% {opacity: 0%; fontSize: 0px; transform: translateY(0%);}
   100% {opacity: 100%;  fontSize: 20px; transform: translateY(5000%);}
+}
+
+@keyframes CositasMas2Celular {
+ 0% {opacity: 0%; fontSize: 0px; transform: translateY(105%);}
+  95% {opacity: 0%; fontSize: 0px; transform: translateY(105%);}
+  100% {opacity: 100%;  fontSize: 50px; transform: translateY(5700%);}
 }
   
   @keyframes SaltarSolo {
@@ -257,6 +269,14 @@ text-align: center;
    #Libro1 {
   position: relative;
   animation: LibroCelular 0.7s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  transform: translateY(105%);
+}
+
+  #Libro2 {
+  position: relative;
+  animation: Libro2Celular 0.7s;
   animation-play-state: paused;
   animation-fill-mode: both;
   transform: translateY(105%);
