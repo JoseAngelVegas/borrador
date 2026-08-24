@@ -16,10 +16,6 @@
 
 <img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
 
-<img class="Prueba" id="ImagenPrueba" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
-
-
-
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 
 <p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
@@ -52,52 +48,8 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
 
        body {
   
-  animation-name: rotateAnimation;
-  animation-duration: 500ms;
-  animation-direction: alternate;
-  animation-timeline: scroll(block nearest);
+  background-color: white;
 }
-
-@keyframes rotateAnimation {
-  from {
-    background-color: white;
-  }
-  to {
-    background-color: black;
-  }
-}
-
-   .Prueba {
-  
-  animation-name: rotateAnimationLibro;
-  animation-duration: 500ms;
-  animation-direction: alternate;
-  animation-play-state: paused;
-  animation-timeline: scroll(block nearest);
-}
-
-@keyframes rotateAnimationLibro {
-  from {
-    width: 0px;
-    height: 0px;
-  }
-  to {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-@layer no-support {
-  @supports not (animation-timeline: scroll()) {
-    body::before {
-      content: "Your browser doesn't support the CSS `scroll()` function.";
-      display: block;
-      text-align: center;
-      padding: 1rem 0;
-    }
-  }
-}
-
 
   #Introduccion {
   position: absolute;
@@ -189,8 +141,8 @@ text-align: center;
 }
 
 @keyframes Libro {
-  0% {opacity: 0%; width: 0px; height: 0px;}
-  100% {opacity: 100%;  width: 115px; height: 155px;}
+  0% {opacity: 0%; width: 0%; height: 0%;}
+  100% {opacity: 100%;  width: 25%; height: 27%;}
 }
 
 @keyframes CositasMas {
@@ -203,67 +155,6 @@ text-align: center;
   0% {opacity: 100%; width: 120px; height: 70px; padding: 5px;   justify-self: end; font-size: 50px;}
   100% {opacity: 0%; width: 0px; height: 0px; padding: 0px; justify-self: end; font-size: 0px;}
  
-}
-
-@keyframes LibroCelular {
-  0% {opacity: 0%; width: 0px; height: 0px;}
-  100% {opacity: 100%;  width: 315px; height: 405px;}
-}
-
-@keyframes AnimacionLetreroCelular {
-  0% {opacity: 0%; font-size: 0px;}
-  100% {opacity: 100%; font-size: 50px;}
-}
-
-
- 
-
-@keyframes CositasMasCelular {
- 0% { opacity: 0%; font-size: 0px; transform: translateY(105%);}  
- 100% { opacity: 100%; font-size: 50px; transform: translateY(5000%);}
- }
- 
-
-
-    @media only screen and (max-width:1400px) {
-    
-    #Letrero {
-  position: relative;
-  animation: AnimacionLetrero 0.5s;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-  text-align: center;
-  
-  }
-  
- 
-    
-   #Libro1 {
-  position: relative;
-  animation: Libro 0.7s;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-  transform: translateY(105%);
-}
-
-  
-
-#TerminosYCondiciones {
-  position: relative;
-  animation: CositasMas 0.8s;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-  
-}
-
-#PoliticaDePrivacidad {
-  position: relative;
-  animation: CositasMas 0.8s;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-}
-
-
 }
   
     
