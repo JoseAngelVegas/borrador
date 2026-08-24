@@ -16,6 +16,9 @@
 
 <img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
 
+<img class="Prueba" id="ImagenPrueba" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
+
+
 
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 
@@ -36,6 +39,9 @@ document.getElementById("TerminosYCondiciones").style.animationPlayState = "runn
 document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
 
   document.getElementById("Introduccion").style.animationPlayState = "running";
+  
+    document.getElementById("ImagenPrueba").style.animationPlayState = "running";
+
 
 }
 
@@ -60,6 +66,27 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
     background-color: black;
   }
 }
+
+   .Prueba {
+  
+  animation-name: rotateAnimationLibro;
+  animation-duration: 500ms;
+  animation-direction: alternate;
+  animation-play-state: paused;
+  animation-timeline: scroll(block nearest);
+}
+
+@keyframes rotateAnimationLibro {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+  }
+}
+.
 
 @layer no-support {
   @supports not (animation-timeline: scroll()) {
