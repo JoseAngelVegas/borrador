@@ -44,9 +44,34 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
 
 <style>
 
-  body {
-       background-color: white;
+       body {
+  
+  animation-name: rotateAnimation;
+  animation-duration: 500ms;
+  animation-direction: alternate;
+  animation-timeline: scroll(block nearest);
 }
+
+@keyframes rotateAnimation {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: black;
+  }
+}
+
+@layer no-support {
+  @supports not (animation-timeline: scroll()) {
+    body::before {
+      content: "Your browser doesn't support the CSS `scroll()` function.";
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+
 
   #Introduccion {
   position: absolute;
@@ -56,7 +81,7 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
   height: 100%;
   object-fit: cover;
   object-position: center;
-  animation: SaltarIntroduccion 0.5s;
+  animation: SaltarIntroduccion 1s;
   animation-play-state: paused;
   animation-fill-mode: both;
 }     
@@ -127,12 +152,13 @@ text-align: center;
 
    @keyframes SaltarIntroduccion {
   0% {opacity: 100%; width: 100%; height: 100%;}
+  95% {opacity: 100%; width: 100%; height: 100%;}
   100% {opacity: 0%; width: 0%; height: 0%;}
   
   }
   
 @keyframes AnimacionLetrero {
-  0% {opacity: 0%; font-size: 0px;}
+  0% {opacity: 0%; font-size:: 0px;}
   100% {opacity: 100%; font-size: 50px;}
 }
 
