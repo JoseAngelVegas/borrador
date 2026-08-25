@@ -16,6 +16,8 @@
 
 <img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
 
+<img class="Empezar" id="Empezar" src="https://github.com/JoseAngelVegas/borrador/blob/main/Empezar.png?raw=true">
+
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 
 <p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
@@ -95,6 +97,14 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
   animation-fill-mode: both;
   }
 
+  #Empezar {
+  animation-play-state: paused;
+  position: relative;
+  animation: Empezar 0.7s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  }
+
   
    #TerminosYCondiciones {
   position: relative;
@@ -113,6 +123,12 @@ document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "runn
   
   
   .Libro {
+      margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+}
+
+  .Empezar {
       margin: 0 auto;
      display: flex;
      flex-direction: column;
@@ -140,6 +156,11 @@ text-align: center;
 }
 
 @keyframes Libro {
+  0% {opacity: 0%; width: 0%; max-height: 0%;}
+  100% {opacity: 100%;  width: 25%; max-height: 100%;}
+}
+
+  @keyframes Empezar {
   0% {opacity: 0%; width: 0%; max-height: 0%;}
   100% {opacity: 100%;  width: 25%; max-height: 100%;}
 }
