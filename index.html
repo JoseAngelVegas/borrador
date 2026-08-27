@@ -68,14 +68,12 @@
   position: relative;
   animation-fill-mode: both;
   width: 0;
-  height; 0;
   }
   
   #Boton3 {
   position: relative;
   animation-fill-mode: both;
   width: 0;
-  height; 0;
   }
   
   #Empezar {
@@ -148,7 +146,7 @@ flex-direction: column;
 }
 
   @keyframes Boton {
-  0% {opacity: 0; width: 0%; max-height: 0%; 25px; transform: translateY(0%);}
+  0% {opacity: 0; width: 0%; max-height: 0%; transform: translateY(0%);}
   100% {opacity: 1; width: 10%; max-height: 40%; transform: translateY(100%);}
 }
 
@@ -182,14 +180,25 @@ flex-direction: column;
   100% {opacity: 0; font-size: 0px;}
 }
 
+@keyframes LibroSaltar {
+  0% {opacity: 0; width: 0%; max-height: 0%;}
+  100% {opacity: 0; width: 0%; max-height: 0%;}
+}
+
 @keyframes TextoSalto {
   0% {opacity: 0; font-size: 0%;}
   100% {opacity: 0; font-size: 0%;}
 }
 
+@keyframes BotonSaltar {
+  0% {opacity: 0; width: 0%; max-height: 0%; transform: translateY(0%);}
+  100% {opacity: 0; width: 0%; max-height: 0%; transform: translateY(0%);}
+}
+
 @keyframes CositasMasSalto {
   0% {opacity: 0; font-size: 0px;}
   100% {opacity: 0; font-size: 0px;}
+  
 }
 
 </style>
@@ -237,8 +246,9 @@ function saltarIntroduccion() {
         document.getElementById("Letrero").style.animationFillMode = "both";
 
 
-    document.getElementById("Libro1").style.width = "0";
-    document.getElementById("Libro1").style.height = "0";
+document.getElementById("Libro1").style.animation = "LibroSaltar 1s";
+        document.getElementById("Libro1").style.animationFillMode = "both";
+
     
     document.getElementById("Empezar").style.animationPlayState = "running";
         document.getElementById("Texto").style.animationPlayState = "running";
@@ -252,6 +262,7 @@ function saltarIntroduccion() {
  }
 
  function salto2() {
+
  
   document.getElementById("Texto").style.animation = "TextoSalto";
        document.getElementById("Texto").style.animationFillMode = "both";
@@ -272,22 +283,25 @@ function saltarIntroduccion() {
  
   function salto3() {
   
-    document.getElementById("Boton3").style.width = "0";
-    document.getElementById("Boton3").style.height = "0";
-    
   document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
-            document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
-            
-     document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
-            document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
+          document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
+          
+          document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
+
+
   
-   document.getElementById("Letrero").style.animationPlayState = "running";
-    document.getElementById("Libro1").style.animationPlayState = "running";
-    document.getElementById("Boton1").style.animationPlayState = "running";
-    
-    }
+    document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
+          document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
+          
+          document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
 
-
+        document.getElementById("Libro1").style.animationFillMode = "both";
+  
+  document.getElementById("Libro1").style.animation = "Libro 1s";
+        document.getElementById("Libro1").style.animationFillMode = "both";
+        
+  }
+      
 </script>
 
 </body>
