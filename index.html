@@ -5,10 +5,6 @@
 <head>
 
 <video autoplay muted id="Introduccion">
-  <source src="(Horizontal) Prueba0001-0481.mp4" type="video/mp4">
-</video>
-
-<video autoplay muted id="IntroduccionCelular">
   <source src="(Vertical) Prueba0001-0481.mp4" type="video/mp4">
 </video>
 
@@ -194,31 +190,7 @@ text-align: center;
 
  @media only screen and (max-width:1400px) {
     
-  #IntroduccionCelular {
-  position: relative;
-  animation: SaltarIntroduccionCelular 0.1s;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-  text-align: center;
-  
-  }
-
-    #Introduccion {
-  position: relative;
-  animation: IntroduccionSinSaltar 0.1s;
-  animation-play-state: running;
-  animation-fill-mode: both;
-  
-  }
-
  }
-
-   @keyframes SaltarIntroduccionCelular {
-  0% {opacity: 100%; width: 100%; height: 100%;}
-  95% {opacity: 100%; width: 100%; height: 100%;}
-  100% {opacity: 0%; width: 0%; height: 0%;}
-  
-  }
 
 
   
