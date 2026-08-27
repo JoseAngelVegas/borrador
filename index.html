@@ -164,13 +164,10 @@ margin: 0 auto;
 
 @keyframes AnimacionLetreroSalto {
   0% {opacity: 0; font-size: 0px;}
-  100% {opacity: 1; font-size: 50px;}
+  100% {opacity: 0; font-size: 0px;}
 }
 
-@keyframes LibroSalto {
-  0% {opacity: 0; width: 0%; max-height: 0%;}
-  100% {opacity: 1; width: 25%; max-height: 100%;}
-}
+
 
 </style>
 </head>
@@ -207,11 +204,15 @@ function saltarIntroduccion() {
 }
        
  function salto1() {
-    document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto 2s";
-    document.getElementById("Libro1").style.animationPlayState = "LibroSalto 1s";
-        
+ 
+    document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto 1s";
+        document.getElementById("Letrero").style.animationFillMode = "both";
+
+
+    document.getElementById("Libro1").style.width = "0";
+    document.getElementById("Libro1").style.height = "0";
+    
     document.getElementById("Empezar").style.animationPlayState = "running";
-    document.getElementById("Texto").style.animationPlayState = "running";
 
  }
 
