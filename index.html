@@ -55,7 +55,14 @@
   animation-play-state: paused;
   animation-fill-mode: both;
   }
-
+       
+  #Boton 1 {
+ animation-play-state: paused;
+  position: relative;
+  animation: Boton 0.7s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  }
   #Empezar {
   animation-play-state: paused;
   position: relative;
@@ -119,6 +126,11 @@ text-align: center;
   100% {opacity: 1; width: 25%; max-height: 100%;}
 }
 
+  @keyframes Boton {
+  0% {opacity: 0; width: 0%; max-height: 0%;}
+  100% {opacity: 1; width: 25%; max-height: 100%;}
+}
+
   @keyframes Empezar {
   0% {opacity: 0; width: 0%; max-height: 0%;}
   100% {opacity: 1; width: 25%; max-height: 100%;}
@@ -138,6 +150,22 @@ text-align: center;
   0% {opacity: 1; width: 150px; height: 70px; padding: 5px; position: absolute; top: 0; right: 0; font-size: 50px;}
   100% {opacity: 0; width: 0px; height: 0px; padding: 0px;  position: absolute; top: 0; right: 0; font-size: 0px;}
 }
+
+
+
+
+
+
+@keyframes AnimacionLetreroSalto {
+  0% {opacity: 0; font-size: 0px;}
+  100% {opacity: 1; font-size: 50px;}
+}
+
+@keyframes LibroSalto {
+  0% {opacity: 0; width: 0%; max-height: 0%;}
+  100% {opacity: 1; width: 25%; max-height: 100%;}
+}
+
 </style>
 </head>
 <body>
@@ -145,6 +173,7 @@ text-align: center;
 <video autoplay muted playsinline webkit-playsinline id="Introduccion">
   <source src="Prueba de introduccion vertical0001-0481.mp4" type="video/mp4">
 </video>
+
 
 <p class="Boton" id="saltar" onclick="saltarIntroduccion()"> Saltar </p>
 <p id="Letrero"> Este es el único libro que recuperó Print. </p>
@@ -158,6 +187,10 @@ text-align: center;
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 <p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
 
+
+
+<img class="Botones" id="Boton1" onclick="salto1()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
+
 <script>
 function saltarIntroduccion() {
     document.getElementById("Introduccion").style.animationPlayState = "running";
@@ -166,8 +199,10 @@ function saltarIntroduccion() {
     document.getElementById("Libro1").style.animationPlayState = "running";
 }
        
- function saltarIntroduccion1() {
-   
+ function Salto1() {
+    document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto 2s";
+    document.getElementById("Libro1").style.animationPlayState = "LibroSalto 1s";
+        
     document.getElementById("Empezar").style.animationPlayState = "running";
     document.getElementById("Texto").style.animationPlayState = "running";
 
