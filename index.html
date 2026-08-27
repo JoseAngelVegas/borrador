@@ -56,8 +56,8 @@
   animation-fill-mode: both;
   }
        
-  #Boton 1 {
- animation-play-state: paused;
+  #Boton1 {
+  animation-play-state: paused;
   position: relative;
   animation: Boton 0.7s;
   animation-play-state: paused;
@@ -110,6 +110,12 @@
 text-align: center;
 }
 
+.Botones {
+margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     }
+
    @keyframes SaltarIntroduccion {
   0% {opacity: 1; width: 100%; height: 100%;}
   95% {opacity: 1; width: 100%; height: 100%;}
@@ -128,7 +134,7 @@ text-align: center;
 
   @keyframes Boton {
   0% {opacity: 0; width: 0%; max-height: 0%;}
-  100% {opacity: 1; width: 25%; max-height: 100%;}
+  100% {opacity: 1; width: 25%; max-height: 40%;}
 }
 
   @keyframes Empezar {
@@ -197,9 +203,10 @@ function saltarIntroduccion() {
     document.getElementById("saltar").style.animationPlayState = "running";
     document.getElementById("Letrero").style.animationPlayState = "running";
     document.getElementById("Libro1").style.animationPlayState = "running";
+    document.getElementById("Boton1").style.animationPlayState = "running";
 }
        
- function Salto1() {
+ function salto1() {
     document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto 2s";
     document.getElementById("Libro1").style.animationPlayState = "LibroSalto 1s";
         
