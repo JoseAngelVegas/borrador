@@ -182,7 +182,15 @@ flex-direction: column;
   100% {opacity: 0; font-size: 0px;}
 }
 
+@keyframes TextoSalto {
+  0% {opacity: 0; font-size: 0%;}
+  100% {opacity: 0; font-size: 0%;}
+}
 
+@keyframes CositasMasSalto {
+  0% {opacity: 0; font-size: 0px;}
+  100% {opacity: 0; font-size: 0px;}
+}
 
 </style>
 </head>
@@ -233,6 +241,8 @@ function saltarIntroduccion() {
     document.getElementById("Libro1").style.height = "0";
     
     document.getElementById("Empezar").style.animationPlayState = "running";
+        document.getElementById("Texto").style.animationPlayState = "running";
+
     
      document.getElementById("Boton1").style.width = "0";
     document.getElementById("Boton1").style.height = "0";
@@ -243,13 +253,40 @@ function saltarIntroduccion() {
 
  function salto2() {
  
+  document.getElementById("Texto").style.animation = "TextoSalto";
+       document.getElementById("Texto").style.animationFillMode = "both";
+ 
   document.getElementById("Empezar").style.width = "0";
     document.getElementById("Empezar").style.height = "0";
  
     document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
     document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
+    
+    document.getElementById("Boton2").style.width = "0";
+    document.getElementById("Boton2").style.height = "0";
+    
+     document.getElementById("Boton3").style.width = "10%";
+    document.getElementById("Boton3").style.maxHeight = "40%";
 
  }
+ 
+  function salto3() {
+  
+    document.getElementById("Boton3").style.width = "0";
+    document.getElementById("Boton3").style.height = "0";
+    
+  document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
+            document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
+            
+     document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
+            document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
+  
+   document.getElementById("Letrero").style.animationPlayState = "running";
+    document.getElementById("Libro1").style.animationPlayState = "running";
+    document.getElementById("Boton1").style.animationPlayState = "running";
+    
+    }
+
 
 </script>
 
