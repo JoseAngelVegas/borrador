@@ -1,68 +1,13 @@
+<!DOCTYPE html>
 <html>
-
-<body>
-
 <head>
-
-<video autoplay muted id="Introduccion">
-  <source src="Prueba de introduccion vertical0001-0481.mp4" type="video/mp4">
-</video>
-
-<p class="Boton" id="saltar" onclick="saltarIntroduccion()"> Saltar </p>
-
-<p id="Letrero"> Este es el único libro que recuperó Print. </p>
-
-
-
-<img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
-
-
-
-
-<img class="Empezar" id="Empezar" src="https://github.com/JoseAngelVegas/borrador/blob/main/Iniciar.png?raw=true">
-
-<p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
-
-
-
-<p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
-
-<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
-
-<script>
-
-function saltarIntroduccion() {
-
-document.getElementById("saltar").style.animationPlayState = "running";
-
-document.getElementById("Letrero").style.animationPlayState = "running";
-
-document.getElementById("Libro1").style.animationPlayState = "running";
-
-document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
-
-document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
-
-document.getElementById("Introduccion").style.animationPlayState = "running";
-  
-
-document.getElementById("Empezar").style.animationPlayState = "running";
-
-document.getElementById("Texto").style.animationPlayState = "running";
-
-
-
-
-}
-
-
-</script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-
        body {
-  
   background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
   #Introduccion {
@@ -78,8 +23,7 @@ document.getElementById("Texto").style.animationPlayState = "running";
   animation-fill-mode: both;
   margin: 0;
   padding: 0;
-  object-fit: cover;
-}     
+}      
       
   #saltar {
   position: relative;
@@ -103,8 +47,6 @@ document.getElementById("Texto").style.animationPlayState = "running";
   animation-fill-mode: both;
   text-align: center;
   }
- 
-
   
   #Libro1 {
   animation-play-state: paused;
@@ -131,7 +73,6 @@ document.getElementById("Texto").style.animationPlayState = "running";
     text-align: center;
   }
 
-  
    #TerminosYCondiciones {
   position: relative;
   animation: CositasMas 1.2s;
@@ -139,14 +80,12 @@ document.getElementById("Texto").style.animationPlayState = "running";
   animation-fill-mode: both;
   }
   
-  
    #PoliticaDePrivacidad {
   position: relative;
   animation: CositasMas 1.3s;
   animation-play-state: paused;
   animation-fill-mode: both;
   }
-  
   
   .Libro {
       margin: 0 auto;
@@ -162,62 +101,75 @@ document.getElementById("Texto").style.animationPlayState = "running";
 
 .CositasMas {
 text-align: center;
-
-}
-
-.CositasMas2 {
-text-align: center;
 }
 
    @keyframes SaltarIntroduccion {
-  0% {opacity: 100%; width: 100%; height: 100%;}
-  95% {opacity: 100%; width: 100%; height: 100%;}
-  100% {opacity: 0%; width: 0%; height: 0%;}
-  
+  0% {opacity: 1; width: 100%; height: 100%;}
+  95% {opacity: 1; width: 100%; height: 100%;}
+  100% {opacity: 0; width: 0; height: 0;}
   }
   
 @keyframes AnimacionLetrero {
-  0% {opacity: 0%; font-size: 0px;}
-  100% {opacity: 100%; font-size: 50px;}
+  0% {opacity: 0; font-size: 0px;}
+  100% {opacity: 1; font-size: 50px;}
 }
 
 @keyframes Libro {
-  0% {opacity: 0%; width: 0%; max-height: 0%;}
-  100% {opacity: 100%;  width: 25%; max-height: 100%;}
+  0% {opacity: 0; width: 0%; max-height: 0%;}
+  100% {opacity: 1; width: 25%; max-height: 100%;}
 }
 
   @keyframes Empezar {
-  0% {opacity: 0%; width: 0%; max-height: 0%; transform: translateY(0%);}
-  100% {opacity: 100%;  width: 25%; max-height: 100%; transform: translateY(400%);}
+  0% {opacity: 0; width: 0%; max-height: 0%; transform: translateY(0%);}
+  100% {opacity: 1; width: 25%; max-height: 100%; transform: translateY(400%);}
 }
 
 @keyframes Texto {
-  0% {opacity: 0%; font-size: 0%;}
-  100% {opacity: 100%; font-size: 200%;}
+  0% {opacity: 0; font-size: 0%;}
+  100% {opacity: 1; font-size: 200%;}
 }
 
 @keyframes CositasMas {
-  0% {opacity: 0%; font-size: 0px; transform: translateY(0%);}
-  100% {opacity: 100%; font-size: 25px; transform: translateY(5700%);}
+  0% {opacity: 0; font-size: 0px; transform: translateY(0%);}
+  100% {opacity: 1; font-size: 25px; transform: translateY(5700%);}
 }
-
 
  @keyframes SaltarBoton {
-  0% {opacity: 100%; width: 150px; height: 70px; padding: 5px; position: absolute; top: 0; right: 0; font-size: 50px;}
-  100% {opacity: 0%; width: 0px; height: 0px; padding: 0px;  position: absolute; top: 0; right: 0; font-size: 0px;}
- 
+  0% {opacity: 1; width: 150px; height: 70px; padding: 5px; position: absolute; top: 0; right: 0; font-size: 50px;}
+  100% {opacity: 0; width: 0px; height: 0px; padding: 0px;  position: absolute; top: 0; right: 0; font-size: 0px;}
 }
-
-
-  
-  
-
-  
-    
 </style>
-
 </head>
+<body>
+
+<video autoplay muted playsinline webkit-playsinline id="Introduccion">
+  <source src="Prueba de introduccion vertical0001-0481.mp4" type="video/mp4">
+</video>
+
+<p class="Boton" id="saltar" onclick="saltarIntroduccion()"> Saltar </p>
+<p id="Letrero"> Este es el único libro que recuperó Print. </p>
+
+<img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
+
+<img class="Empezar" id="Empezar" src="https://github.com/JoseAngelVegas/borrador/blob/main/Iniciar.png?raw=true">
+
+<p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
+
+<p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
+<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
+
+<script>
+function saltarIntroduccion() {
+    document.getElementById("saltar").style.animationPlayState = "running";
+    document.getElementById("Letrero").style.animationPlayState = "running";
+    document.getElementById("Libro1").style.animationPlayState = "running";
+    document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
+    document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
+    document.getElementById("Introduccion").style.animationPlayState = "running";
+    document.getElementById("Empezar").style.animationPlayState = "running";
+    document.getElementById("Texto").style.animationPlayState = "running";
+}
+</script>
 
 </body>
-
 </html>
