@@ -63,6 +63,21 @@
   animation-play-state: paused;
   animation-fill-mode: both;
   }
+  
+  #Boton2 {
+  position: relative;
+  animation-fill-mode: both;
+  width: 0;
+  height; 0;
+  }
+  
+  #Boton3 {
+  position: relative;
+  animation-fill-mode: both;
+  width: 0;
+  height; 0;
+  }
+  
   #Empezar {
   animation-play-state: paused;
   position: relative;
@@ -112,8 +127,8 @@ text-align: center;
 
 .Botones {
 margin: 0 auto;
-     display: flex;
-     flex-direction: column;
+display: flex;
+flex-direction: column;
      }
 
    @keyframes SaltarIntroduccion {
@@ -134,7 +149,7 @@ margin: 0 auto;
 
   @keyframes Boton {
   0% {opacity: 0; width: 0%; max-height: 0%; 25px; transform: translateY(0%);}
-  100% {opacity: 1; width: 10%; max-height: 40%; 25px; transform: translateY(100%);}
+  100% {opacity: 1; width: 10%; max-height: 40%; transform: translateY(100%);}
 }
 
   @keyframes Empezar {
@@ -148,8 +163,8 @@ margin: 0 auto;
 }
 
 @keyframes CositasMas {
-  0% {opacity: 0; font-size: 0px; transform: translateY(0%);}
-  100% {opacity: 1; font-size: 25px; transform: translateY(5700%);}
+  0% {opacity: 0; font-size: 0px;}
+  100% {opacity: 1; font-size: 25px;}
 }
 
  @keyframes SaltarBoton {
@@ -194,6 +209,11 @@ margin: 0 auto;
 
 <img class="Botones" id="Boton1" onclick="salto1()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
 
+<img class="Botones" id="Boton2" onclick="salto2()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
+
+<img class="Botones" id="Boton3" onclick="salto3()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
+
+
 <script>
 function saltarIntroduccion() {
     document.getElementById("Introduccion").style.animationPlayState = "running";
@@ -213,10 +233,19 @@ function saltarIntroduccion() {
     document.getElementById("Libro1").style.height = "0";
     
     document.getElementById("Empezar").style.animationPlayState = "running";
-
+    
+     document.getElementById("Boton1").style.width = "0";
+    document.getElementById("Boton1").style.height = "0";
+    
+     document.getElementById("Boton2").style.width = "10%";
+    document.getElementById("Boton2").style.maxHeight = "40%";
  }
 
- function saltarIntroduccion2() {
+ function salto2() {
+ 
+  document.getElementById("Empezar").style.width = "0";
+    document.getElementById("Empezar").style.height = "0";
+ 
     document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
     document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
 
