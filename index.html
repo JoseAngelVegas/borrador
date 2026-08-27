@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<button onclick="location.reload();">Recargar Pagina</button>
+
 <style>
+
+
        body {
   background-color: white;
   margin: 0;
@@ -142,22 +147,22 @@ flex-direction: column;
 
 @keyframes Libro {
   0% {opacity: 0; width: 0%; max-height: 0%;}
-  100% {opacity: 1; width: 15%; max-height: 100%;}
+  100% {opacity: 1; width: 40%; max-height: 100%;}
 }
 
   @keyframes Boton {
   0% {opacity: 0; width: 0%; max-height: 0%; transform: translateY(0%);}
-  100% {opacity: 1; width: 10%; max-height: 40%; transform: translateY(100%);}
+  100% {opacity: 1; width: 30%; max-height: 40%; transform: translateY(100%);}
 }
 
   @keyframes Empezar {
   0% {opacity: 0; width: 0%; max-height: 0%;}
-  100% {opacity: 1; width: 25%; max-height: 100%;}
+  100% {opacity: 1; width: 40%; max-height: 100%;}
 }
 
 @keyframes Texto {
   0% {opacity: 0; font-size: 0%;}
-  100% {opacity: 1; font-size: 200%;}
+  100% {opacity: 1; font-size: 250%;}
 }
 
 @keyframes CositasMas {
@@ -257,7 +262,7 @@ document.getElementById("Libro1").style.animation = "LibroSaltar 1s";
     document.getElementById("Boton1").style.height = "0";
     document.getElementById("Boton1").style.animation = "none";
     
-     document.getElementById("Boton2").style.width = "10%";
+     document.getElementById("Boton2").style.width = "30%";
     document.getElementById("Boton2").style.maxHeight = "40%";
  }
 
@@ -276,7 +281,7 @@ document.getElementById("Libro1").style.animation = "LibroSaltar 1s";
     document.getElementById("Boton2").style.width = "0";
     document.getElementById("Boton2").style.height = "0";
     
-     document.getElementById("Boton3").style.width = "10%";
+     document.getElementById("Boton3").style.width = "30%";
     document.getElementById("Boton3").style.maxHeight = "40%";
 
  }
@@ -299,26 +304,6 @@ document.getElementById("Libro1").style.animation = "LibroSaltar 1s";
           document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
 
 
-  document.getElementById("Libro1").style.animation = "Libro 1s";
-  
-          document.getElementById("Libro1").style.animationFillMode = "both";
-          
-          
-         document.getElementById("Letrero").style.animation = "AnimacionLetrero 1s";
-        document.getElementById("Letrero").style.animationFillMode = "both";
-
-        
-        
-        
-        
-        
-   document.getElementById("Boton1").style.animationFillMode = "both";
-  
-  document.getElementById("Boton1").style.animation = "BotonSalto 1s";
-  
-     document.getElementById("Boton1").style.animationFillMode = "both";
-
-        
   }
       
 </script>
