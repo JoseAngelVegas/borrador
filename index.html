@@ -16,7 +16,14 @@
 
 <img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
 
+
+
+
 <img class="Empezar" id="Empezar" src="https://github.com/JoseAngelVegas/borrador/blob/main/Iniciar.png?raw=true">
+
+<p class="Texto" id="Texto"> Algo pasa por la mente de Print. Presiona para entrar a su mente. </p>
+
+
 
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 
@@ -40,6 +47,9 @@ document.getElementById("Introduccion").style.animationPlayState = "running";
   
 
 document.getElementById("Empezar").style.animationPlayState = "running";
+
+document.getElementById("Texto").style.animationPlayState = "running";
+
 
 
 
@@ -107,15 +117,24 @@ document.getElementById("Empezar").style.animationPlayState = "running";
   #Empezar {
   animation-play-state: paused;
   position: relative;
-  animation: Empezar 0.7s;
+  animation: Empezar 0.9s;
   animation-play-state: paused;
   animation-fill-mode: both;
+  }
+  
+  #Texto {
+  animation-play-state: paused;
+  position: relative;
+  animation: Texto 1.1s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+    text-align: center;
   }
 
   
    #TerminosYCondiciones {
   position: relative;
-  animation: CositasMas 0.8s;
+  animation: CositasMas 1.2s;
   animation-play-state: paused;
   animation-fill-mode: both;
   }
@@ -123,7 +142,7 @@ document.getElementById("Empezar").style.animationPlayState = "running";
   
    #PoliticaDePrivacidad {
   position: relative;
-  animation: CositasMas 0.8s;
+  animation: CositasMas 1.3s;
   animation-play-state: paused;
   animation-fill-mode: both;
   }
@@ -172,6 +191,11 @@ text-align: center;
   100% {opacity: 100%;  width: 25%; max-height: 100%; transform: translateY(400%);}
 }
 
+@keyframes Texto {
+  0% {opacity: 0%; font-size: 0%; transform: translateY(0%);}
+  100% {opacity: 100%; font-size: 100%; transform: translateY(1000%);}
+}
+
 @keyframes CositasMas {
   0% {opacity: 0%; font-size: 0px; transform: translateY(0%);}
   100% {opacity: 100%; font-size: 25px; transform: translateY(5700%);}
@@ -184,12 +208,11 @@ text-align: center;
  
 }
 
- @media only screen and (max-width:1400px) {
-    
- }
-
+ 
   
 
+
+  
   
     
 </style>
