@@ -237,7 +237,7 @@ flex-direction: column;
 
 <p class="ElegirEpisodio" id="ElegirEpisodio"> Elige un episodio. </p>
 
-<p class="ElegirEpisodio" id="Episodio1"> Episodio 1 </p>
+<p class="ElegirEpisodio" id="Episodio1" onclick="Episodio1()"> Episodio 1 </p>
 <p class="ElegirEpisodio" id="Episodio2"> Episodio 2 </p>
 <p class="ElegirEpisodio" id="Episodio3"> Episodio 2 </p>
 
@@ -337,10 +337,44 @@ document.getElementById("Episodio2").style.fontSize = "0%";
  document.getElementById("Episodio3").style.fontSize = "0%";
 document.getElementById("ElegirEpisodio").style.fontSize = "0%";
        
-
-        
+    
     }
       
+</script>
+
+<script>
+
+function Episodio1() {
+
+ document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
+document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
+
+ document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
+document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
+
+       document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto";
+       
+document.getElementById("Letrero").style.animationFillMode = "both";
+
+       document.getElementById("Libro1").style.animation = "LibroSaltar";
+document.getElementById("Libro1").style.animationFillMode = "both";
+
+  document.getElementById("Texto").style.animation = "TextoSalto";
+document.getElementById("Texto").style.animationFillMode = "both";
+ 
+  document.getElementById("Empezar").style.animation = "EmpezarSalto";
+        document.getElementById("Empezar").style.animationFillMode = "both";
+        
+       document.getElementById("Episodio1").style.fontSize = "0%";
+document.getElementById("Episodio2").style.fontSize = "0%";
+ document.getElementById("Episodio3").style.fontSize = "0%";
+document.getElementById("ElegirEpisodio").style.fontSize = "0%";
+
+document.getElementById("Boton1").style.width = "0%";
+                document.getElementById("Boton1").style.maxHeight = "0%";
+
+}
+
 </script>
 
 </body>
