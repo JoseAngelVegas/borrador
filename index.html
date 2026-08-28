@@ -60,11 +60,8 @@
   }
        
   #Boton1 {
-  animation-play-state: paused;
-  position: relative;
-  animation: Boton 0.7s;
-  animation-play-state: paused;
-  animation-fill-mode: both;
+  width: 0%;
+  max-height: 0%;
   }
   
   #Boton2 {
@@ -189,13 +186,18 @@ flex-direction: column;
 }
 
 @keyframes LibroSaltar {
-  0% {opacity: 0; width: 0%; max-height: 0%;}
+  0% {opacity: 1; width: 40%; max-height: 100%;}
   100% {opacity: 0; width: 0%; max-height: 0%;}
 }
 
 @keyframes TextoSalto {
-  0% {opacity: 0; font-size: 0%;}
+  0% {opacity: 1; font-size: 210%;}
   100% {opacity: 0; font-size: 0%;}
+}
+
+  @keyframes EmpezarSalto {
+  0% {opacity: 0; width: 0%; max-height: 0%;}
+  100% {opacity: 0; width: 0%; max-height: 0%;}
 }
 
 @keyframes BotonSaltar {
@@ -277,15 +279,17 @@ document.getElementById("Libro1").style.animationFillMode = "both";
   document.getElementById("Texto").style.animation = "TextoSalto";
 document.getElementById("Texto").style.animationFillMode = "both";
  
-  document.getElementById("Empezar").style.width = "0";
-document.getElementById("Empezar").style.height = "0";
+  document.getElementById("Empezar").style.animation = "Empezar";
+       document.getElementById("Empezar").style.animationPlayState = "running";
+        document.getElementById("Empezar").style.animationFillMode = "both";
 
 document.getElementById("Episodio1").style.fontSize = "200%";
 document.getElementById("Episodio2").style.fontSize = "200%";
  document.getElementById("Episodio3").style.fontSize = "200%";
 document.getElementById("ElegirEpisodio").style.fontSize = "450%";
 
-    document.getElementById("Boton1").style.animationPlayState = "running";
+    document.getElementById("Boton1").style.width = "30%";
+                document.getElementById("Boton1").style.maxHeight = "40%";
 
               
        }
@@ -298,12 +302,16 @@ document.getElementById("ElegirEpisodio").style.fontSize = "450%";
         
           document.getElementById("Libro1").style.animation = "Libro";
        document.getElementById("Libro1").style.animationPlayState = "running";
-        document.getElementById("Libro1").style.animationFillMode = "both";
+       
+               document.getElementById("Libro1").style.animationFillMode = "both";
+
         
-          document.getElementById("Boton1").style.animation = "BotonSaltar";
-       document.getElementById("Boton1").style.animationPlayState = "running";
-        document.getElementById("Boton1").style.animationFillMode = "both";
+        document.getElementById("Boton1").style.width = "0%";
+                document.getElementById("Boton1").style.maxHeight = "0%";
+
+
         
+                
         document.getElementById("Letrero").style.animation = "AnimacionLetrero";
        document.getElementById("Letrero").style.animationPlayState = "running";
         document.getElementById("Letrero").style.animationFillMode = "both";
