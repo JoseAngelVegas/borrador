@@ -126,6 +126,11 @@
 text-align: center;
 }
 
+       .ElegirEpisodio {
+text-align: center;
+              font-size: 0%;
+}
+
 .Botones {
 margin: 0 auto;
 display: flex;
@@ -212,7 +217,7 @@ flex-direction: column;
   <source src="Prueba de introduccion vertical0001-0481.mp4" type="video/mp4">
 </video>
 
-<video autoplay muted loop playsinline webkit-playsinline id="Empezar" class="Empezar">
+<video autoplay muted loop playsinline webkit-playsinline id="Empezar" class="Empezar" onclick="menuPrint()">
   <source src="Print0001-0085.mp4" type="video/mp4">
 </video>
 
@@ -227,6 +232,11 @@ flex-direction: column;
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 <p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
 
+<p class="ElegirEpisodio" id="ElegirEpisodio"> Elige un episodio. </p>
+
+<p class="ElegirEpisodio" id="Episodio1"> Episodio 1 </p>
+<p class="ElegirEpisodio" id="Episodio2"> Episodio 2 </p>
+<p class="ElegirEpisodio" id="Episodio3"> Episodio 2 </p>
 
 
 <img class="Botones" id="Boton1" onclick="salto1()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
@@ -300,6 +310,23 @@ document.getElementById("Libro1").style.animation = "LibroSaltar 1s";
           document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
 
   }
+
+       function menuPrint() {
+
+  document.getElementById("Texto").style.animation = "TextoSalto";
+document.getElementById("Texto").style.animationFillMode = "both";
+ 
+  document.getElementById("Empezar").style.width = "0";
+document.getElementById("Empezar").style.height = "0";
+
+              document.getElementById("Episodio1").style.fontSize = "25%";
+               document.getElementById("Episodio2").style.height = "25%";
+               document.getElementById("Episodio3").style.height = "25%";
+
+               document.getElementById("ElegirEpisodio").style.height = "25%";
+
+       }
+
       
 </script>
 
