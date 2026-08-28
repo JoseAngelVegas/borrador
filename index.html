@@ -419,18 +419,20 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
 
        <script>
               
-const cinematica = document.getElementBy('Cerebro');
+const cinematica = document.getElementById('Cerebro');
 const boton = document.getElementById('Episodio1');
 
               boton.addEventListener('click', function() {
 
-                     video.play();
+                     cinematica.play();
               });
        
 function Episodio1() {
 
 document.getElementById("Cerebro").style.width = "100%";
 document.getElementById("Cerebro").style.height = "100%";
+
+       cinematica.play();
 
  document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
 document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
