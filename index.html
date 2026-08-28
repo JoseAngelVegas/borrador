@@ -212,11 +212,13 @@ flex-direction: column;
 }
 
 #PruebaMensaje {
+display: none;
 width: 0%;
 max-height: 0%;
 }
 
 #PruebaMensaje.mostrar {
+display: block;
 width: 40%;
 max-height: 100%;
 
@@ -234,7 +236,7 @@ max-height: 100%;
   <source src="Prueba de introduccion vertical0001-0481.mp4" type="video/mp4">
 </video>
 
-<img id="PruebaMensaje" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true" style="display: none;">
+<img id="PruebaMensaje" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
     
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
@@ -362,6 +364,7 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
     const mensaje = document.getElementById('PruebaMensaje');
     
     video.addEventListener('ended', () => {
+           video.style.display = 'none';
     mensaje.classList.add('mostrar');
     });
   
