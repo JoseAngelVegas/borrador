@@ -50,14 +50,6 @@
   animation-fill-mode: both;
   text-align: center;
   }
-  
-  #Libro1 {
-  animation-play-state: paused;
-  position: relative;
-  animation: Libro 0.7s;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-  }
        
   #Boton1 {
   width: 0%;
@@ -211,17 +203,42 @@ flex-direction: column;
   
 }
 
-#PruebaMensaje {
+#saltar {
 display: none;
 margin: 0 auto;
        
 }
 
-#PruebaMensaje.mostrar {
+#saltar.mostrar {
 display: block;
-animation: Libro 5s;
+animation: SaltarBoton 1s;
 animation-fill-mode: both;
 
+}
+
+#Letrero {
+display: none;
+margin: 0 auto;
+       
+}
+
+#Letrero.mostrar {
+display: block;
+animation: AnimacionLetrero 0.5s;
+animation-fill-mode: both;
+
+}
+
+#Libro1 {
+display: none;
+margin: 0 auto;
+       
+}
+
+#Libro1.mostrar {
+display: block;
+animation: Libro 0.7s;
+animation-fill-mode: both;
 
 }
 
@@ -235,10 +252,7 @@ animation-fill-mode: both;
 
 <video autoplay muted playsinline webkit-playsinline id="Introduccion">
   <source src="Prueba de introduccion vertical0001-0481.mp4" type="video/mp4">
-</video>
-
-<img id="PruebaMensaje" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
-    
+</video>    
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
 
