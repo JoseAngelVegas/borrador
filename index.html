@@ -240,7 +240,7 @@ flex-direction: column;
 <p class="ElegirEpisodio" id="Episodio3"> Episodio 2 </p>
 
 
-<img class="Botones" id="Boton1" onclick="salto1()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
+<img class="Botones" id="Boton1" onclick="Cerrar()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
 
 <img class="Botones" id="Boton2" onclick="salto2()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
 
@@ -289,8 +289,48 @@ document.getElementById("ElegirEpisodio").style.fontSize = "450%";
 
               
        }
-
        
+ function Cerrar() {
+       
+       document.getElementById("Letrero").style.animation = "AnimacionLetrero";
+       document.getElementById("Letrero").style.animationPlayState = "running";
+        document.getElementById("Letrero").style.animationFillMode = "both";
+        
+          document.getElementById("Libro1").style.animation = "Libro";
+       document.getElementById("Libro1").style.animationPlayState = "running";
+        document.getElementById("Libro1").style.animationFillMode = "both";
+        
+          document.getElementById("Boton1").style.animation = "BotonSaltar";
+       document.getElementById("Boton1").style.animationPlayState = "running";
+        document.getElementById("Boton1").style.animationFillMode = "both";
+        
+        document.getElementById("Letrero").style.animation = "AnimacionLetrero";
+       document.getElementById("Letrero").style.animationPlayState = "running";
+        document.getElementById("Letrero").style.animationFillMode = "both";
+        
+        document.getElementById("Empezar").style.animation = "Empezar";
+       document.getElementById("Empezar").style.animationPlayState = "running";
+        document.getElementById("Empezar").style.animationFillMode = "both";
+        
+        document.getElementById("Texto").style.animation = "Texto";
+       document.getElementById("Texto").style.animationPlayState = "running";
+        document.getElementById("Texto").style.animationFillMode = "both";
+        
+        document.getElementById("TerminosYCondiciones").style.animation = "CositasMas";
+       document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
+        document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
+        
+         document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMas";
+       document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
+        document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
+        
+        document.getElementById("Episodio1").style.fontSize = "0%";
+document.getElementById("Episodio2").style.fontSize = "0%";
+ document.getElementById("Episodio3").style.fontSize = "0%";
+document.getElementById("ElegirEpisodio").style.fontSize = "0%";
+       
+    
+    }
       
 </script>
 
