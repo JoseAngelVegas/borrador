@@ -270,7 +270,7 @@ animation-fill-mode: both;
   <source src="Cerebro.mp4" type="video/mp4">
 </video>
 
-<video muted playsinline webkit-playsinline id="Cerebro2" onclick="CerebroClick()">
+<video muted playsinline webkit-playsinline id="Cerebro2">
   <source src="Cerebro 2.mp4" type="video/mp4">
 </video>
 
@@ -484,17 +484,16 @@ document.getElementById("Boton1").style.width = "0%";
 
 }
 
-function CerebroClick() {
 
-document.getElementById("Cerebro").style.width = "0%";
-document.getElementById("Cerebro").style.height = "0%";
-cinematica1.pause();
+cinematica1.addEventListener('click', function() {
+ cinematica1.pause();
+cinematica1.style.width = "0%";
+cinematica1.style.height = "0%";
 
-cinematica2.play();
+cinematica2.style.width = "100%";
+cinematica2.style.height = "100%";
 
-document.getElementById("Cerebro2").style.width = "100%";
-document.getElementById("Cerebro2").style.height = "100%";
-}
+});
 
 </script>
 
