@@ -438,12 +438,14 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
 
        <script>
               
-const cinematica = document.getElementById('Cerebro');
+const cinematica1 = document.getElementById('Cerebro');
+const cinematica2 = document.getElementById('Cerebro2');
 const boton = document.getElementById('Episodio1');
+
 
               boton.addEventListener('click', function() {
 
-                     cinematica.play();
+                     cinematica1.play();
               });
        
 function Episodio1() {
@@ -451,7 +453,7 @@ function Episodio1() {
 document.getElementById("Cerebro").style.width = "100%";
 document.getElementById("Cerebro").style.height = "100%";
 
-       cinematica.play();
+       cinematica1.play();
 
  document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
 document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
@@ -482,20 +484,11 @@ document.getElementById("Boton1").style.width = "0%";
 
 }
 
-
-
-const cinematica = document.getElementById('Cerebro2');
-const boton = document.getElementById('Cerebro');
-
-boton.addEventListener('click', function() {
-
-                     cinematica.play();
-              });
-
 function CerebroClick() {
 
 document.getElementById("Cerebro").style.width = "0%";
 document.getElementById("Cerebro").style.height = "0%";
+cinematica1.pause();
 
 cinematica2.play();
 
