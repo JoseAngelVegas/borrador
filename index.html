@@ -63,18 +63,7 @@
   width: 0%;
   max-height: 0%;
   }
-  
-  #Boton2 {
-  position: relative;
-  animation-fill-mode: both;
-  width: 0;
-  }
-  
-  #Boton3 {
-  position: relative;
-  animation-fill-mode: both;
-  width: 0;
-  }
+
   
   #Empezar {
   animation-play-state: paused;
@@ -277,7 +266,7 @@ animation-fill-mode: both;
 
 
 
-<video autoplay muted playsinline webkit-playsinline id="Cerebro">
+<video muted playsinline webkit-playsinline id="Cerebro">
   <source src="Cerebro.mp4" type="video/mp4">
 </video>
 
@@ -429,7 +418,15 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
 </style>
 
        <script>
+              
+const cinematica = document.getElementBy('Cerebro');
+const boton = document.getElementById('Episodio1');
 
+              boton.addEventListener('click', function() {
+
+                     video.play();
+              });
+       
 function Episodio1() {
 
 document.getElementById("Cerebro").style.width = "100%";
