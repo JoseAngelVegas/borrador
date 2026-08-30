@@ -15,8 +15,8 @@
 
 .Pizarra {
        position: relative;
-       width: 0%;
-       height: 0%;
+       width: 100%;
+       height: 100%;
        background: white;
 }
 
@@ -315,7 +315,7 @@ stroke-linecap: round;
 
 
 <svg id="svg-pizarra">
-       <line id="coneccion" x1="0" y1="0" x2="0" y2="0" style="display: none"> 
+       <line id="temp" style="display:none"/>
 </line>
               </svg>
 
@@ -571,10 +571,10 @@ cinematica2.style.height = "100%";
               return { x: r.left + r.width/2, y: r.top + r.height/2};
        };
 
-       document.querySelectorAll('Nodos').forEach(Nodos => {
+       document.querySelectorAll('.Nodos').forEach(Nodos => {
               Nodos.addEventListener('click', (e) => {
                      e.stopPropagation();
-                     const c = getCenter(Nodos);
+                     const c = centro(Nodos);
 
        if (!iniciar) {
               iniciar = Nodos;
@@ -592,14 +592,14 @@ cinematica2.style.height = "100%";
 
                             if (!pares.has(key)) {
                                    pares.add(key);
-                            const 1 = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                            const l = document.createElementNS("http://www.w3.org/2000/svg", "line");
 
-                     1.setAttribute('x1', sc.x);
-                     1.setAttribute('y1', sc.y);
-                     1.setAttribute('x1', sc.y);
-                     1.setAttribute('y2', sc.y);
+                     l.setAttribute('x1', sc.x);
+                     l.setAttribute('y1', sc.y);
+                     l.setAttribute('x1', sc.y);
+                     l.setAttribute('y2', sc.y);
 
-               1.setAttribute('stroke', '#27ae20');
+               l.setAttribute('stroke', '#27ae20');
                                    
        document.querySelector('svg').appendChild(1);
 
