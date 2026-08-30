@@ -563,7 +563,7 @@ cinematica2.style.height = "100%";
 
 <script>
 
-       let iniciar = null, pairs = new Set();
+       let iniciar = null, pares = new Set();
        const temp = document.getElementById('temp');
 
        const centro = n => {
@@ -571,14 +571,14 @@ cinematica2.style.height = "100%";
               return { x: r.left + r.width/2, y: r.top + r.height/2};
        };
 
-       document.querySelectorAll('nodo').forEach(nodo => {
-              node.addEventListener('click', (e) => {
+       document.querySelectorAll('Nodos').forEach(Nodos => {
+              Nodos.addEventListener('click', (e) => {
                      e.stopPropagation();
-                     const c = getCenter(nodo);
+                     const c = getCenter(Nodos);
 
        if (!iniciar) {
-              iniciar = nodo;
-              nodo.classList.add('activo');
+              iniciar = Nodos;
+              Nodos.classList.add('active');
               temp.setAttribute('x1', c.x);
               temp.setAttribute('y1', c.y);
               temp.setAttribute('x2', c.x);
@@ -586,9 +586,9 @@ cinematica2.style.height = "100%";
 
               temp.style.display = 'block';
        }
-                     else if (iniciar !== nodo) {
+                     else if (iniciar !== Nodos) {
                             const sc = centro(inicio);
-                            const key = [inicio.id, nodo.id].sort().join('-');
+                            const key = [inicio.id, Nodos.id].sort().join('-');
 
                             if (!pares.has(key)) {
                                    pares.add(key);
@@ -603,8 +603,7 @@ cinematica2.style.height = "100%";
                                    
        document.querySelector('svg').appendChild(1);
 
-                                   if (pares.size ===6)
-       document.getElementById('msg').style.display = 'block';
+               if (pares.size ===6) document.getElementById('msg').style.display = 'block';
                             }
                             reset();
                      }
