@@ -234,7 +234,7 @@ animation-fill-mode: both;
 
 #nodo1 { top: 200px; left: 50px; }
 #nodo2 { top: 300px; left: 100px; }
-#nodo3 { top: 400px; left: 150px; }
+#nodo3 { top: 400px; left: 200px; }
 
 svg {
        position: absolute;
@@ -253,14 +253,12 @@ stroke-linecap: round;
 
        #msg {
               position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: scale(0);
               background: blue;
               color: black;
               font-size: 24px;
               z-index: 100;
               pointer-events: none;
+              display: none;
        }
 
 
@@ -311,13 +309,8 @@ stroke-linecap: round;
 
 
 
-<svg id="svg-pizarra">
-       <line id="temp" style="display:none"/>
-</line>
-              </svg>
-
-       <div id="PruebaNodo"> Esto deberia aparecer </div>
-</div>
+<svg><line id="temp" style="display:none"/></svg>
+    <div id="msg">Listo</div>
 
 
 
