@@ -22,7 +22,7 @@
 
 .Nodos {
        position: absolute;
-       width: 0%;
+       max-width: 0%;
        max-height: 0%;
        display: flex;
        justify-content: center;
@@ -555,8 +555,10 @@ cinematica1.style.height = "0%";
 cinematica2.style.width = "100%";
 cinematica2.style.height = "100%";
 
-nodo1.style.width = "5%"; 
-nodo1.style.maxHeight = "40%";
+
+    nodo1.style.width = "50px";
+    nodo1.style.height = "50px";
+    nodo1.style.zIndex = "1000";
 
        cinematica2.play();
 
