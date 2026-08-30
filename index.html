@@ -563,63 +563,66 @@ cinematica2.style.height = "100%";
 
 <script>
 
+       let iniciar = null, pairs = new Set();
+       const temp = document.getElementById('temp');
 
-const pizarra = document.getElementById('Pizarra');
-
-const nodos = document.querySelectorAll('.Nodos');
-
-const linea = document.getElementById('coneccion-linea');
-
-const continuaNodo = document.getElementById('PruebaNodo');
-
-let estaConectado = false;
-let iniciarNodo = null;
-
-const conectados = new Set();
-
-const nodosTotales = Nodos.lenght
-const coneccionRequerida = (nodosTotales * (nodosTotales - 1)) / 2;
-
-function tomarNodoCentral(Nodos) {
-       const rect = node.getBoundingClientRect();
-       const pizarraRect = pizarra.getBoundingClientRect();
-       return {
-              x: rect.left + rect.width / 2 - pizarraRect.left,
-              y: rect.top + recto.height / 2 - pizarraRect.top
+       const centro = n => {
+              const r = n.getBoundingClientRect();
+              return { x: r.left + r.width/2, y: r.top + r.height/2};
        };
-}
 
-       nodos.forEach(Nodos => {
-              Nodos.addEventListener('click', (e) => {
+       document.querySelectorAll('nodo').forEach(nodo => {
+              node.addEventListener('click', (e) => {
                      e.stopPropagation();
+                     const c = getCenter(nodo);
 
-                     if (!estaConectado) {
-                            estaConectado = true;
-                            iniciarNodo = nodo;
-                            nodo.classList.add('activo');
+       if (!iniciar) {
+              iniciar = nodo;
+              nodo.classList.add('activo');
+              temp.setAttribute('x1', c.x);
+              temp.setAttribute('y1', c.y);
+              temp.setAttribute('x2', c.x);
+              temp.setAttribute('y2', c.y);
 
-       const centro = getNodeCenter(nodo);
-                            line.setAttribute('x1', center.x);
-                            line.setAttribute('y1', center.y);
-                             line.setAttribute('x2', center.x);
-                            line.setAttribute('y2', center.y);
+              temp.style.display = 'block';
+       }
+                     else if (iniciar !== nodo) {
+                            const sc = centro(inicio);
+                            const key = [inicio.id, nodo.id].sort().join('-');
 
-                     styleLine(Linea, true);
-                     } else {
-                            if (iniciarNodo !== nodo) {
+                            if (!pares.has(key)) {
+                                   pares.add(key);
+                            const 1 = document.createElementNS("http://www.w3.org/2000/svg", "line");
 
-                                   const pairKey =
-              [iniciarNodo.id, nodo.id].sort().join('-');
+                     1.setAttribute('x1', sc.x);
+                     1.setAttribute('y1', sc.y);
+                     1.setAttribute('x1', sc.y);
+                     1.setAttribute('y2', sc.y);
 
-                                   if
-(!connectedPairs.has(pairKey)) {
+               1.setAttribute('stroke', '#27ae20');
+                                   
+       document.querySelector('svg').appendChild(1);
 
-       connectedPairs.add(pairKey);
+                                   if (pares.size ===6)
+       document.getElementById('msg').style.display = 'block';
+                            }
+                            reset();
+                     }
+              });
+       });
 
-       const startCenter
-                                          
+       window.addEventListener('mousemove', e => {
+              if (inicio) { temp.setAttribute('x2', e.clientX);
+                          temp.setAttribute('y2', e.clientY); }
+       });
 
+       window.addEventListener('click', reset);
 
+       function reset() {
+              if (inicio) inicio.classList.remove('activo');
+              inicio = null;
+              temp.style.display = 'none';
+       }
        
 </script>
 
