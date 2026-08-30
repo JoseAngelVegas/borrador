@@ -22,8 +22,8 @@
 
 .Nodos {
        position: absolute;
-       width: 50px;
-       height: 50px;
+       width: 25px;
+       max-height: 40px;
        display: flex;
        justify-content: center;
        align-items: center;
@@ -504,6 +504,8 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
 const cinematica1 = document.getElementById('Cerebro');
 const cinematica2 = document.getElementById('Cerebro2');
 const nodo1 = document.getElementById('nodo1');
+const nodo2 = document.getElementById('nodo2');
+const nodo3 = document.getElementById('nodo3');
 const boton = document.getElementById('Episodio1');
 
 
@@ -515,6 +517,8 @@ const boton = document.getElementById('Episodio1');
 cinematica2.addEventListener('ended', function() {
        
 nodo1.style.display = 'flex';
+nodo2.style.display = 'flex';
+nodo3.style.display = 'flex';
        
  });
        
