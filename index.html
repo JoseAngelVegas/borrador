@@ -22,13 +22,14 @@
 
 .Nodos {
        position: absolute;
-       width: 0%;
-       max-height: 0%;
+       width: 50%;
+       max-height: 50%;
        display: flex;
        justify-content: center;
        align-items: center;
        cursor: pointer;
        user-select: none;
+       display: none;
 }
 
   #Introduccion {
@@ -509,6 +510,10 @@ const boton = document.getElementById('Episodio1');
 
                      cinematica1.play();
               });
+
+               cinematica2.('ended', function() {
+ nodo1.classList.remove('Nodos');
+ });
        
 function Episodio1() {
 
@@ -556,13 +561,10 @@ cinematica2.style.width = "100%";
 cinematica2.style.height = "100%";
 
 
-    nodo1.style.width = "50px";
-    nodo1.style.maxHeight = "50px";
-    nodo1.style.zIndex = "1000";
-
        cinematica2.play();
 
 });
+
 
 </script>
 
