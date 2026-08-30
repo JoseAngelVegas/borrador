@@ -511,8 +511,10 @@ const boton = document.getElementById('Episodio1');
                      cinematica1.play();
               });
 
-               cinematica2.('ended', function() {
+cinematica2.addEventListener('ended', function() {
+       
  nodo1.classList.remove('Nodos');
+       
  });
        
 function Episodio1() {
