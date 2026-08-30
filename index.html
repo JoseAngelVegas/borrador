@@ -251,7 +251,7 @@ stroke-width: 3;
 stroke-linecap: round;
 }
 
-       #PruebaNodo {
+       #msg {
               position: absolute;
               top: 50%;
               left: 50%;
@@ -260,13 +260,10 @@ stroke-linecap: round;
               color: black;
               font-size: 24px;
               z-index: 100;
-              transition: pruebaNodoAnimacion;
               pointer-events: none;
        }
 
-       #PruebaNodo.show {
-              transform: scale(1)
-       }
+
 
 </style>
 </head>
@@ -576,8 +573,8 @@ cinematica2.style.height = "100%";
                      e.stopPropagation();
                      const c = centro(Nodos);
 
-       if (!iniciar) {
-              iniciar = Nodos;
+       if (!inicio) {
+              inicio = Nodos;
               Nodos.classList.add('activo');
               temp.setAttribute('x1', c.x);
               temp.setAttribute('y1', c.y);
@@ -586,7 +583,7 @@ cinematica2.style.height = "100%";
 
               temp.style.display = 'block';
        }
-                     else if (iniciar !== Nodos) {
+                     else if (inicio !== Nodos) {
                             const sc = centro(inicio);
                             const key = [inicio.id, Nodos.id].sort().join('-');
 
@@ -596,12 +593,12 @@ cinematica2.style.height = "100%";
 
                      l.setAttribute('x1', sc.x);
                      l.setAttribute('y1', sc.y);
-                     l.setAttribute('x2', c.y);
+                     l.setAttribute('x2', c.x);
                      l.setAttribute('y2', c.y);
 
                l.setAttribute('stroke', '#27ae20');
                                    
-       document.querySelector('svg').appendChild(1);
+       document.querySelector('svg').appendChild(l);
 
                if (pares.size ===3) document.getElementById('msg').style.display = 'block';
                             }
