@@ -561,6 +561,68 @@ cinematica2.style.height = "100%";
 
 </script>
 
+<script>
+
+
+const pizarra = document.getElementById('Pizarra');
+
+const nodos = document.querySelectorAll('.Nodos');
+
+const linea = document.getElementById('coneccion-linea');
+
+const continuaNodo = document.getElementById('PruebaNodo');
+
+let estaConectado = false;
+let iniciarNodo = null;
+
+const conectados = new Set();
+
+const nodosTotales = Nodos.lenght
+const coneccionRequerida = (nodosTotales * (nodosTotales - 1)) / 2;
+
+function tomarNodoCentral(Nodos) {
+       const rect = node.getBoundingClientRect();
+       const pizarraRect = pizarra.getBoundingClientRect();
+       return {
+              x: rect.left + rect.width / 2 - pizarraRect.left,
+              y: rect.top + recto.height / 2 - pizarraRect.top
+       };
+}
+
+       nodos.forEach(Nodos => {
+              Nodos.addEventListener('click', (e) => {
+                     e.stopPropagation();
+
+                     if (!estaConectado) {
+                            estaConectado = true;
+                            iniciarNodo = nodo;
+                            nodo.classList.add('activo');
+
+       const centro = getNodeCenter(nodo);
+                            line.setAttribute('x1', center.x);
+                            line.setAttribute('y1', center.y);
+                             line.setAttribute('x2', center.x);
+                            line.setAttribute('y2', center.y);
+
+                     styleLine(Linea, true);
+                     } else {
+                            if (iniciarNodo !== nodo) {
+
+                                   const pairKey =
+              [iniciarNodo.id, nodo.id].sort().join('-');
+
+                                   if
+(!connectedPairs.has(pairKey)) {
+
+       connectedPairs.add(pairKey);
+
+       const startCenter
+                                          
+
+
+       
+</script>
+
        
 </body>
 </html>
