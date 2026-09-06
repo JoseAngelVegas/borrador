@@ -276,9 +276,17 @@ document.getElementById("Empezar").style.animationPlayState = "running";
     document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
        
 }
+ const boton = document.querySelector('#Empezar');
+  const caja = document.querySelector('.MenteDePrintPaginas');
+
+        boton.addEventListener('click', function() {
+
+caja.classList.toggle('mostrar');
+        });
+
 
        function mentePrint() {
-
+       
  document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
 document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
 
@@ -298,17 +306,7 @@ document.getElementById("Texto").style.animationFillMode = "both";
   document.getElementById("Empezar").style.animation = "EmpezarSalto";
       document.getElementById("Empezar").style.animationFillMode = "both";
       
-     
-   
-document.getElementById("P1").style.width = "40%";
-document.getElementById("P1").style.height = "40%";
-
-pagina1.style.display = 'flex';
-pagina2.style.display = 'flex';
-
-document.getElementById("P2").style.width = "40%";
-document.getElementById("P2").style.height = "40%";
-
+    
 
               
        }
@@ -396,29 +394,47 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
 <style>
       
 
-#P1 {
-  display: flex;
-  width: 0%;
-  height: 0%;
+.MenteDePrintPaginas {
+  width: 0% !important;
+  height: auto !important;
+  max-height: 0vh;
+  object-fit: contain;
   margin: 0 auto;
-  padding: 0;
 }
 
-#P2 {
-  display: flex;
-  width: 0%;
-  height: 0%;
-  margin: 0 auto;
-  padding: 0;
+
+.MenteDePrintPaginas.mostrar {
+object-fit: contain;
+        margin: 0 auto;
+        display: flex;
+ width: 40% !important;
+        height: auto !important;
+        max-height: 100vh;
+       
+
 }
+
 
  @media only screen and (max-width:500px) {
-       #P1, #P2 {
+       .PaginasMenteDePrint {
+        width: 0% !important;
+        height: auto !important;
+        max-height: 0vh;
+        
+
+        }
+        
+        .MenteDePrintPaginas.mostrar {
+        object-fit: contain;
+        margin: 0 auto;
+        display: flex;
         width: 100% !important;
         height: auto !important;
         max-height: 100vh;
-        object-fit: contain;
+        
+
         }
+
  }
        
        
