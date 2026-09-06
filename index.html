@@ -221,55 +221,6 @@ flex-direction: column;
   
 }
 
-#PruebaMensaje {
-display: none;
-margin: 0 auto;
-       
-}
-
-#PruebaMensaje.mostrar {
-display: block;
-animation: Libro 0.7;
-animation-fill-mode: both;
-
-
-}
-
-#nodo1 { top: 200px; left: 50px; }
-#nodo2 { top: 300px; left: 100px; }
-#nodo3 { top: 400px; left: 200px; }
-
-svg {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       pointer-events: none;
-}
-
-line { 
-stroke: yellow;
-stroke-width: 3;
-stroke-linecap: round;
-}
-
-       #msg {
-              position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-  margin: 0;
-  padding: 0;
-              z-index: 100;
-              pointer-events: none;
-              display: none;
-       }
 
 
 
@@ -285,12 +236,12 @@ stroke-linecap: round;
   <source src="Prueba de introduccion vertical0001-0481.mp4" type="video/mp4">
 </video>
 
-<img id="PruebaMensaje" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
+
     
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
 
-<video autoplay muted loop playsinline webkit-playsinline id="Empezar" class="Empezar" onclick="menuPrint()">
+<video autoplay muted loop playsinline webkit-playsinline id="Empezar" class="Empezar" onclick="mentePrint()">
   <source src="Empezar.mp4" type="video/mp4">
 </video>
 
@@ -298,48 +249,13 @@ stroke-linecap: round;
 <p class="Boton" id="saltar" onclick="saltarIntroduccion()"> Saltar </p>
 
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
-<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>
+<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>   
 
-<p class="ElegirEpisodio" id="ElegirEpisodio"> Elige un episodio. </p>
-
-<p class="ElegirEpisodio" id="Episodio1" onclick="Episodio1()"> Episodio 1 </p>
-<p class="ElegirEpisodio" id="Episodio2"> Episodio 2 </p>
-<p class="ElegirEpisodio" id="Episodio3"> Episodio 2 </p>
-
-
-<img class="Botones" id="Boton1" onclick="Cerrar()" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
-
-
-<div class="PizarraContenedor" id="Pizarra">
-       
-
-<img class="Nodos" id="nodo1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
-<img class="Nodos" id="nodo2" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
- <img class="Nodos" id="nodo3" src="https://github.com/JoseAngelVegas/borrador/blob/main/Boton.png?raw=true">
-
-
-
-<svg><line id="temp" style="display:none"/></svg>
-       <video autoplay muted playsinline webkit-playsinline id="msg">
-  <source src="Respaldo 20001-0862.mp4" type="video/mp4">
-</video>
 
 
 
 <img id="P1" class="MenteDePrintPaginas" src="https://github.com/JoseAngelVegas/borrador/blob/main/1.png?raw=true">
 <img id="P2" class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1.png?raw=true">
-
-
-
-<video muted playsinline webkit-playsinline id="Cerebro">
-  <source src="Cerebro.mp4" type="video/mp4">
-</video>
-
-
-
-<video muted playsinline webkit-playsinline id="Cerebro2">
-  <source src="Cerebro 2.mp4" type="video/mp4">
-</video>
 
 
 
@@ -361,7 +277,7 @@ document.getElementById("Empezar").style.animationPlayState = "running";
        
 }
 
-       function menuPrint() {
+       function mentePrint() {
 
  document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
 document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
@@ -380,15 +296,19 @@ document.getElementById("Libro1").style.animationFillMode = "both";
 document.getElementById("Texto").style.animationFillMode = "both";
  
   document.getElementById("Empezar").style.animation = "EmpezarSalto";
-        document.getElementById("Empezar").style.animationFillMode = "both";
+      document.getElementById("Empezar").style.animationFillMode = "both";
+      
+     
+   
+document.getElementById("P1").style.width = "40%";
+document.getElementById("P1").style.height = "40%";
 
-document.getElementById("Episodio1").style.fontSize = "200%";
-document.getElementById("Episodio2").style.fontSize = "200%";
- document.getElementById("Episodio3").style.fontSize = "200%";
-document.getElementById("ElegirEpisodio").style.fontSize = "450%";
+pagina1.style.display = 'flex';
+pagina2.style.display = 'flex';
 
-    document.getElementById("Boton1").style.width = "30%";
-                document.getElementById("Boton1").style.maxHeight = "40%";
+document.getElementById("P2").style.width = "40%";
+document.getElementById("P2").style.height = "40%";
+
 
               
        }
@@ -474,34 +394,7 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
 
 
 <style>
-       
-#Cerebro {
-       
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 0%;
-  object-fit: cover;
-  object-position: center;
-  margin: 0;
-  padding: 0;
-
-}
-
-#Cerebro2 {
-       
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 0%;
-  object-fit: cover;
-  object-position: center;
-  margin: 0;
-  padding: 0;
-
-}
+      
 
 #P1 {
   display: flex;
@@ -560,48 +453,6 @@ cinematica2.style.height = "0%";
        
  });
        
-function Episodio1() {
-
-document.getElementById("P1").style.width = "40%";
-document.getElementById("P1").style.height = "40%";
-
-pagina1.style.display = 'flex';
-pagina2.style.display = 'flex';
-
-document.getElementById("P2").style.width = "40%";
-document.getElementById("P2").style.height = "40%";
-
-       cinematica1.play();
-
- document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
-document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
-
-document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
-document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
-
-document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto";
-       
-document.getElementById("Letrero").style.animationFillMode = "both";
-
-       document.getElementById("Libro1").style.animation = "LibroSaltar";
-document.getElementById("Libro1").style.animationFillMode = "both";
-
-  document.getElementById("Texto").style.animation = "TextoSalto";
-document.getElementById("Texto").style.animationFillMode = "both";
- 
-  document.getElementById("Empezar").style.animation = "EmpezarSalto";
-        document.getElementById("Empezar").style.animationFillMode = "both";
-        
-       document.getElementById("Episodio1").style.fontSize = "0%";
-document.getElementById("Episodio2").style.fontSize = "0%";
- document.getElementById("Episodio3").style.fontSize = "0%";
-document.getElementById("ElegirEpisodio").style.fontSize = "0%";
-
-document.getElementById("Boton1").style.width = "0%";
-                document.getElementById("Boton1").style.maxHeight = "0%";
-
-}
-
 
 cinematica1.addEventListener('click', function() {
 cinematica1.pause();
@@ -617,70 +468,6 @@ cinematica2.style.height = "100%";
 });
 
 
-</script>
-
-<script>
-
-       let inicio = null, pares = new Set();
-       const temp = document.getElementById('temp');
-
-       const centro = n => {
-              const r = n.getBoundingClientRect();
-              return { x: r.left + r.width/2, y: r.top + r.height/2};
-       };
-
-       document.querySelectorAll('.Nodos').forEach(Nodos => {
-              Nodos.addEventListener('click', (e) => {
-                     e.stopPropagation();
-                     const c = centro(Nodos);
-
-       if (!inicio) {
-              inicio = Nodos;
-              Nodos.classList.add('activo');
-              temp.setAttribute('x1', c.x);
-              temp.setAttribute('y1', c.y);
-              temp.setAttribute('x2', c.x);
-              temp.setAttribute('y2', c.y);
-
-              temp.style.display = 'block';
-       }
-                     else if (inicio !== Nodos) {
-                            const sc = centro(inicio);
-                            const key = [inicio.id, Nodos.id].sort().join('-');
-
-                            if (!pares.has(key)) {
-                                   pares.add(key);
-                            const l = document.createElementNS("http://www.w3.org/2000/svg", "line");
-
-                     l.setAttribute('x1', sc.x);
-                     l.setAttribute('y1', sc.y);
-                     l.setAttribute('x2', c.x);
-                     l.setAttribute('y2', c.y);
-
-               l.setAttribute('stroke', '#27ae20');
-                                   
-       document.querySelector('svg').appendChild(l);
-
-               if (pares.size ===3) document.getElementById('msg').style.display = 'block';
-                            }
-                            reset();
-                     }
-              });
-       });
-
-       window.addEventListener('mousemove', e => {
-              if (inicio) { temp.setAttribute('x2', e.clientX);
-                          temp.setAttribute('y2', e.clientY); }
-       });
-
-       window.addEventListener('click', reset);
-
-       function reset() {
-              if (inicio) inicio.classList.remove('activo');
-              inicio = null;
-              temp.style.display = 'none';
-       }
-       
 </script>
 
        
