@@ -219,8 +219,23 @@ flex-direction: column;
   0% {opacity: 0; font-size: 0px;}
   100% {opacity: 0; font-size: 0px;}
   
+  
 }
 
+#Episodio1 {
+font-size: 0%;
+
+}
+
+#Episodio2 {
+font-size: 0%;
+
+}
+
+#Episodio3 {
+font-size: 0%;
+
+}
 
 
 
@@ -229,6 +244,16 @@ flex-direction: column;
 <body>
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
+
+<p class="ElegirEpisodio" id="ElegirEpisodio"> Elegir episodios. </p>
+
+<p class="ElegirEpisodio" id="Episodio1" onclick="Episodio1"> Episodio 1 </p>
+
+<p class="ElegirEpisodio" id="Episodio2"> Episodio 2 </p>
+
+<p class="ElegirEpisodio" id="Episodio3"> Episodio 3 </p>
+
+
 
 <video autoplay muted loop playsinline webkit-playsinline id="Empezar" class="Empezar" onclick="mentePrint()">
   <source src="Empezar.mp4" type="video/mp4">
@@ -294,17 +319,18 @@ document.getElementById("Empezar").style.animationPlayState = "running";
 }
 
 
- const boton = document.querySelector('#Empezar');
- const cajas = document.querySelectorAll('.MenteDePrintPaginas');
-
-        boton.addEventListener('click', function() {
-            cajas.forEach(function(caja) {
-                caja.classList.toggle('mostrar');
-            });
-        });
-
-
        function mentePrint() {
+       
+             document.getElementById("ElegirEpisodio").style.fontSize = "500%";
+             
+           document.getElementById("Episodio1").style.fontSize = "300%";
+           
+                                                document.getElementById("Episodio2").style.fontSize = "300%";
+
+                                                document.getElementById("Episodio3").style.fontSize = "300%";
+
+       
+       
        
  document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
 document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
@@ -325,7 +351,19 @@ document.getElementById("Texto").style.animationFillMode = "both";
   document.getElementById("Empezar").style.animation = "EmpezarSalto";
       document.getElementById("Empezar").style.animationFillMode = "both";
       
+      
+      
     
+ const boton1 = document.querySelector('#Episodio1');
+ const paginas = document.querySelectorAll('.MenteDePrintPaginas');
+ const texto = document.querySelectorAll('.MenteDePrintPaginas');
+
+        boton1.addEventListener('click', function() {
+            paginas.forEach(function(episodio1Paginas) {
+                episodio1Paginas.classList.toggle('mostrar');
+            });
+        });
+
 
               
        }
@@ -341,10 +379,7 @@ document.getElementById("Texto").style.animationFillMode = "both";
        
                document.getElementById("Libro1").style.animationFillMode = "both";
 
-        
-        document.getElementById("Boton1").style.width = "0%";
-                document.getElementById("Boton1").style.maxHeight = "0%";
-
+       
 
         
                 
