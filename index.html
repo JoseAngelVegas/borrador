@@ -228,6 +228,8 @@ flex-direction: column;
 </head>
 <body>
 
+
+
 <p id="Letrero"> Este es el único libro que recuperó Print. </p>
 
 <img class="Libro" id="Libro1" src="https://github.com/JoseAngelVegas/borrador/blob/main/Sin%20nombre%20ni%20nada.png?raw=true">
@@ -254,14 +256,12 @@ flex-direction: column;
 
 
 
-<img id="P1" class="MenteDePrintPaginas" src="https://github.com/JoseAngelVegas/borrador/blob/main/1.png?raw=true">
-<img id="P2" class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1.png?raw=true">
+<img class="MenteDePrintPaginas" src="https://github.com/JoseAngelVegas/borrador/blob/main/1.png?raw=true">
 
-
+<img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/2.0.png?raw=true">
 
 
        
-  
 
        
 <script>
@@ -276,8 +276,10 @@ document.getElementById("Empezar").style.animationPlayState = "running";
     document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
        
 }
+
+
  const boton = document.querySelector('#Empezar');
-  const caja = document.querySelector('.MenteDePrintPaginas');
+ const caja = document.querySelector('.MenteDePrintPaginas');
 
         boton.addEventListener('click', function() {
 
@@ -348,11 +350,7 @@ document.getElementById("Texto").style.animationFillMode = "both";
          document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMas";
        document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
         document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
-        
-        document.getElementById("Episodio1").style.fontSize = "0%";
-document.getElementById("Episodio2").style.fontSize = "0%";
- document.getElementById("Episodio3").style.fontSize = "0%";
-document.getElementById("ElegirEpisodio").style.fontSize = "0%";
+       
        
     
     }
@@ -361,58 +359,24 @@ document.getElementById("ElegirEpisodio").style.fontSize = "0%";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-
-
-
-
-
-
-
-
 <style>
       
 
-.MenteDePrintPaginas {
-  width: 0% !important;
-  height: auto !important;
-  max-height: 0vh;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-
-.MenteDePrintPaginas.mostrar {
-object-fit: contain;
-        margin: 0 auto;
-        display: flex;
- width: 40% !important;
+    .MenteDePrintPaginas {
+        width: 0% !important;
         height: auto !important;
-        max-height: 100vh;
-       
+        margin: 0 auto;
+        position: relative;
+        }
 
-}
+
+     .MenteDePrintPaginas.mostrar {
+     box-shadow: 0px 0px 5px black;
+     border-radius: 25px;
+     display: flex;
+        width: 40% !important;
+        height: auto !important;
+       }
 
 
  @media only screen and (max-width:500px) {
@@ -440,52 +404,7 @@ object-fit: contain;
        
 </style>
 
-       <script>
-              
-const cinematica1 = document.getElementById('Cerebro');
-const cinematica2 = document.getElementById('Cerebro2');
-const nodo1 = document.getElementById('nodo1');
-const nodo2 = document.getElementById('nodo2');
-const nodo3 = document.getElementById('nodo3');
-const boton = document.getElementById('Episodio1');
-
-const pagina1 = document.getElementById('P1');
-const pagina2 = document.getElementById('P2');
-
-
-              boton.addEventListener('click', function() {
-
-                     cinematica1.play();
-              });
-
-cinematica2.addEventListener('ended', function() {
        
-nodo1.style.display = 'flex';
-nodo2.style.display = 'flex';
-nodo3.style.display = 'flex';
-
-cinematica2.style.width = "0%";
-cinematica2.style.height = "0%";
-       
- });
-       
-
-cinematica1.addEventListener('click', function() {
-cinematica1.pause();
-cinematica1.style.width = "0%";
-cinematica1.style.height = "0%";
-
-cinematica2.style.width = "100%";
-cinematica2.style.height = "100%";
-
-
-       cinematica2.play();
-
-});
-
-
-</script>
-
        
 </body>
 </html>
