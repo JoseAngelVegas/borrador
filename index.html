@@ -279,11 +279,12 @@ document.getElementById("Empezar").style.animationPlayState = "running";
 
 
  const boton = document.querySelector('#Empezar');
- const caja = document.querySelector('.MenteDePrintPaginas');
+ const cajas = document.querySelectorAll('.MenteDePrintPaginas');
 
         boton.addEventListener('click', function() {
-
-caja.classList.toggle('mostrar');
+            cajas.forEach(function(caja) {
+                caja.classList.toggle('mostrar');
+            });
         });
 
 
