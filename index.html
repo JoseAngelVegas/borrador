@@ -392,18 +392,24 @@ document.getElementById("Texto").style.animationFillMode = "both";
       
     
  const boton1 = document.querySelector('#Episodio1');
- const paginas = document.querySelectorAll('.MenteDePrintPaginas');
- const texto = document.querySelectorAll('.MenteDePrintPaginas');
+  const boton2 = document.querySelector('#Episodio2');
+  
+const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
+const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
+ 
+ const texto1 = document.querySelectorAll('.MenteDePrintPaginas');
+  const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
+
 
         boton1.addEventListener('click', function() {
-            paginas.forEach(function(episodio1Paginas) {
+            paginas1.forEach(function(episodio1Paginas) {
                 episodio1Paginas.classList.toggle('mostrar');
             });
         });
 
- boton1.addEventListener('click', function() {
-            texto.forEach(function(Episodio1) {
-                Episodio1.classList.toggle('cambio');
+       boton2.addEventListener('click', function() {
+            paginas2.forEach(function(episodio2Paginas) {
+                episodio2Paginas.classList.toggle('mostrar');
             });
         });
 
@@ -472,6 +478,25 @@ document.getElementById("Texto").style.animationFillMode = "both";
         height: auto !important;
         animation: Paginas 1s both;
        }
+       
+      
+    .MenteDePrintPaginas2 {
+        width: 0% !important;
+        height: auto !important;
+        margin: 0 auto;
+        position: relative;
+        
+        }
+        
+        .MenteDePrintPaginas2.mostrar {
+     box-shadow: 0px 0px 5px black;
+     border-radius: 25px;
+     display: flex;
+        width: 40% !important;
+        height: auto !important;
+        animation: Paginas 2s both;
+       }
+
 
 
  @media only screen and (max-width:500px) {
@@ -493,6 +518,23 @@ document.getElementById("Texto").style.animationFillMode = "both";
         
 
         }
+        
+       .MenteDePrintPaginas2 {
+        width: 0% !important;
+        height: auto !important;
+        margin: 0 auto;
+        position: relative;
+        
+        }
+        
+        .MenteDePrintPaginas2.mostrar {
+     box-shadow: 0px 0px 5px black;
+     border-radius: 25px;
+     display: flex;
+        width: 100% !important;
+        height: auto !important;
+        animation: Paginas 2s both;
+       }
 
  }
        
