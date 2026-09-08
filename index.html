@@ -426,9 +426,11 @@ document.getElementById("Texto").style.animationFillMode = "both";
     
  const boton1 = document.querySelector('#Episodio1');
   const boton2 = document.querySelector('#Episodio2');
+  const boton3 = document.querySelector('#Episodio3');
   
 const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
 const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
+const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
  
  const texto1 = document.querySelectorAll('.MenteDePrintPaginas');
   const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
@@ -443,6 +445,12 @@ const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
        boton2.addEventListener('click', function() {
             paginas2.forEach(function(episodio2Paginas) {
                 episodio2Paginas.classList.toggle('mostrar');
+            });
+        });
+
+       boton2.addEventListener('click', function() {
+            paginas3.forEach(function(episodio3Paginas) {
+                episodio3Paginas.classList.toggle('mostrar');
             });
         });
 
