@@ -381,8 +381,22 @@ flex-direction: column;
 <img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/28%20E3.png?raw=true">
 
 
+         <script>
+   const scriptUrl = 'https://script.google.com/macros/s/AKfycbxhLO00mQ9TL0VpJCM-AZeXsqR77dCmJUf02r-lZzyIE0q9dmO_HwQxlF8aEp3iLPKS/exec';
+   
+const form = document.forms['formulario'];
+
+   form.addEventListener('submit', e => {
+      e.preventDefault()
+      
+fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
+      
+   })
+</script>
        
 <script>
+
+
 function saltarIntroduccion() {
     document.getElementById("Introduccion").style.animationPlayState = "running";
     document.getElementById("saltar").style.animationPlayState = "running";
