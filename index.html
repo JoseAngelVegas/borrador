@@ -213,14 +213,20 @@ flex-direction: column;
 </head>
 <body>
 
-<form name="formulario" method="post" action="https://script.google.com/macros/s/AKfycbwH-wIPrzAtDZp3wiSmf5kHVhnfb4xgf4-HwFxgz_Bv8kJEiA2FimQKK_M1r3fOdUso/exec">
-       
-<input name="Comentarios" type="text" placeholder="Espero que esto funcione" maxlenght="50"/>
+<form name="formulario" method="post" action="https://script.google.com/macros/s/AKfycbzRde1ZZvK0DygQyOKX03ZPIxm2CM0mZlgZeHx6bx-I2n1Y_eItBRHVTzc0cBgGceDz/exec">
 
-<label for="publicacion"></label>
+<div class="botones">
 
-<button type="submit">Enviar publicación</button>
+<input name="Publicaciones" class="input" id="escribirTexto" type="text" placeholder="Escribe tu publicación" maxlenght="50"/>
 
+<input  id="encabezado" name="Encabezado" class="escribirPeriodico" type="text" placeholder=" " maxlenght="50"/>
+<input  id="parrafo" name="Parrafo" class="escribirPeriodico" type="text" placeholder=" " maxlenght="100"/>
+
+<label for="publicacion" class="placeholder" class="inicio"></label>
+
+<button type="submit" class="submit inicio">Enviar publicación</button>
+
+<button type="submit" class="enviar inicio">Enviar publicación</button>
        
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
@@ -382,7 +388,7 @@ flex-direction: column;
 
 
          <script>
-   const scriptUrl = 'https://script.google.com/macros/s/AKfycbwH-wIPrzAtDZp3wiSmf5kHVhnfb4xgf4-HwFxgz_Bv8kJEiA2FimQKK_M1r3fOdUso/exec';
+   const scriptUrl = 'https://script.google.com/macros/s/AKfycbzRde1ZZvK0DygQyOKX03ZPIxm2CM0mZlgZeHx6bx-I2n1Y_eItBRHVTzc0cBgGceDz/exec';
    
 const form = document.forms['formulario'];
 
@@ -393,6 +399,7 @@ fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
       
    })
 </script>
+                
        
 <script>
 
