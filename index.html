@@ -127,14 +127,19 @@ flex-direction: column;
 
 #Descripcion1 {
        font-size: 0%;
+       text-align: center;
+
        }
        
   #DejaComentario {
        font-size: 0%;
+       text-align: center;
+
        }
        
         #Enviado {
        font-size: 0%;
+       text-align: center;
        }
 
    @keyframes SaltarIntroduccion {
@@ -271,7 +276,7 @@ flex-direction: column;
 
 <label for="publicacion" class="Comentario" id="label"></label>
 
-<button type="submit" class="Comentario" id="submit">Enviar publicación</button>
+<button type="submit" class="Comentario" id="submit" onclick="enviado()">Enviar publicación</button>
 
 <input type="reset" class="Comentario" id="reset" value="Borrar">
 
@@ -543,10 +548,13 @@ document.getElementById("Descripcion1").style.fontSize = "20px";
 document.getElementById("DejaComentario").style.fontSize = "15px";
 
 
-      
+
+               
         }
+        function input() {
+               document.getElementById("Enviado").style.fontSize = "18px";
 
-
+        }
 
 
        
