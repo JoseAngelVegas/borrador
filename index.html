@@ -272,11 +272,11 @@ flex-direction: column;
 
 <form name="formulario" method="post" action="https://script.google.com/macros/s/AKfycbzRde1ZZvK0DygQyOKX03ZPIxm2CM0mZlgZeHx6bx-I2n1Y_eItBRHVTzc0cBgGceDz/exec">
 
-<input name="Comentarios" class="Comentario" id="escribirTexto" type="text" placeholder="Escribe tu publicación" maxlenght="50"/>
+<input name="Comentarios" class="Comentario" id="escribirTexto" type="text" placeholder="..." maxlenght="50"/>
 
 <label for="publicacion" class="Comentario" id="label"></label>
 
-<button type="submit" class="Comentario" id="submit" onclick="enviado()">Enviar publicación</button>
+<button type="submit" class="Comentario" id="submit" onclick="enviado()">Enviar</button>
 
 <input type="reset" class="Comentario" id="reset" value="Borrar">
 
@@ -553,6 +553,20 @@ document.getElementById("DejaComentario").style.fontSize = "15px";
         }
         function enviado() {
                document.getElementById("Enviado").style.fontSize = "18px";
+
+               
+                document.getElementById("escribirTexto").style.visibility = "hidden";
+                document.getElementById("escribirTexto").style.fontSize = "0px";
+
+                  document.getElementById("label").style.visibility = "hidden";
+                  document.getElementById("label").style.fontSize = "0px";
+
+
+document.getElementById("reset").style.visibility = "hidden";
+   document.getElementById("reset").style.fontSize = "0px";
+    
+  document.getElementById("submit").style.visibility = "hidden";
+  document.getElementById("submit").style.fontSize = "0px";
 
         }
 
