@@ -218,10 +218,11 @@ flex-direction: column;
 
 <input name="Comentarios" class="Comentario" id="escribirTexto" type="text" placeholder="Escribe tu publicación" maxlenght="50"/>
 
-<label for="publicacion" class="Comentario" class="inicio"></label>
+<label for="publicacion" class="Comentario" id="label"></label>
 
-<button type="submit" class="Comentario">Enviar publicación</button>
-<input type="reset" class="Comentario" value="Borrar">
+<button type="submit" class="Comentario" id="submit">Enviar publicación</button>
+
+<input type="reset" class="Comentario" id="reset" value="Borrar">
        
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
@@ -255,7 +256,7 @@ flex-direction: column;
 
 <p class="Boton" id="saltar" onclick="saltarIntroduccion()"> Saltar </p>
 
-<p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
+<p class="CositasMas" id="TerminosYCondiciones" onclick="input()"> Términos y Condiciones. </p>
 <p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>   
 
 
@@ -451,7 +452,6 @@ document.getElementById("Texto").style.animationFillMode = "both";
   const boton2 = document.querySelector('#Episodio2');
   const boton3 = document.querySelector('#Episodio3');
 
-  const boton4 = document.querySelector('#Libro1');
   
 const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
 const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
@@ -459,9 +459,6 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
  
  const texto1 = document.querySelectorAll('.MenteDePrintPaginas');
   const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
-
- const comentario = document.querySelectorAll('.Comentarios');
-
 
 
         boton1.addEventListener('click', function() {
@@ -482,15 +479,26 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
             });
         });
 
-
-         boton4.addEventListener('click', function() {
-            comentario.forEach(function(comentariosFuncion) {
-                comentariosFuncion.classList.toggle('mostrar');
-            });
-
-              });
-
        }
+       
+        function input() {
+        
+        
+ document.getElementById("escribirTexto").style.visibility = "visible";
+    document.getElementById("escribirTexto").style.fontSize = "20px";
+
+    
+   document.getElementById("label").style.visibility = "visible";
+    document.getElementById("label").style.fontSize = "50px";
+
+
+document.getElementById("reset").style.visibility = "visible";
+   document.getElementById("reset").style.fontSize = "15px";
+    
+  document.getElementById("submit").style.visibility = "visible";
+  document.getElementById("submit").style.fontSize = "15px";
+      
+        }
        
  function Cerrar() {
        
@@ -610,31 +618,18 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
        .Comentario {
   position: relative;
   display: flex;
-   width: 0% !important;
-   height: 0% !important;
+   width: 50% !important;
+   height: auto !important;
    margin: 0 auto;
    border-radius: 5px;
   background-color: white;
-  visibility: hidden;
+    visibility: hidden;¿
   text-align: center;
   box-shadow: 0px 0px 0px;
   font-size: 0px;
 }
 
-         .Comentario.mostrar {
-  position: relative;
-   width: 50% !important;
-   height: auto !important;
-    margin: 0 auto;
-   border-radius: 25px;
-  background-color: white;
-  text-align: center;
-    visibility: visible;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2.5px;
-  font-size: 50px;
-}
-
+    
 
 
  @media only screen and (max-width:500px) {
