@@ -279,7 +279,7 @@ flex-direction: column;
 <p class="Boton" id="saltar" onclick="saltarIntroduccion()"> Saltar </p>
 
 <p class="CositasMas" id="TerminosYCondiciones" onclick="TerminosYCondiciones()"> Términos y Condiciones. </p>
-<p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>   
+<p class="CositasMas" id="PoliticaDePrivacidad" onclick="PoliticaDePrivacidad()"> Política de privacidad. </p>   
 
 
 <p id="Cerrar" onclick="cerrar()"> X </p>
@@ -667,6 +667,33 @@ document.getElementById("Leer1").style.visibility = "hidden";
     }
 
 function TerminosYCondiciones() {
+   
+
+document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
+document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
+
+ document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
+document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
+
+       document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto";
+       
+document.getElementById("Letrero").style.animationFillMode = "both";
+
+       document.getElementById("Libro1").style.animation = "LibroSaltar";
+document.getElementById("Libro1").style.animationFillMode = "both";
+
+  document.getElementById("Texto").style.animation = "TextoSalto";
+document.getElementById("Texto").style.animationFillMode = "both";
+ 
+  document.getElementById("Empezar").style.animation = "EmpezarSalto";
+      document.getElementById("Empezar").style.animationFillMode = "both";
+
+}
+      
+      
+</script>
+
+function PoliticaDePrivacidad() {
    
 
 document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
