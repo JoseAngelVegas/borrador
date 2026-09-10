@@ -125,6 +125,10 @@ display: flex;
 flex-direction: column;
      }
 
+.Descripcion {
+       font-size: 0%;
+       }
+
    @keyframes SaltarIntroduccion {
   0% {opacity: 1; width: 100%; height: 100%;}
   95% {opacity: 1; width: 100%; height: 100%;}
@@ -251,7 +255,7 @@ flex-direction: column;
 
 <p class="Descripcion" id="Descripcion1"> Este es un libro de biología ficticio escrito por una criatura que es la última de su especie. </p>
 <p class="Descripcion" id="DejaComentario"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
-<p id="Enviado"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
+<p class="Descripcion" id="Enviado"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
 
 <form name="formulario" method="post" action="https://script.google.com/macros/s/AKfycbzRde1ZZvK0DygQyOKX03ZPIxm2CM0mZlgZeHx6bx-I2n1Y_eItBRHVTzc0cBgGceDz/exec">
 
@@ -527,9 +531,17 @@ document.getElementById("Empezar").style.animation = "EmpezarSalto";
        document.getElementById("Empezar").style.animationPlayState = "running";
         document.getElementById("Empezar").style.animationFillMode = "both";
         
-       
+document.getElementById("Descripcion1").style.fontSize = "20%";
+document.getElementById("DejaComentarios").style.fontSize = "12%";
+
+
       
         }
+
+
+
+
+       
        
  function Cerrar() {
        
