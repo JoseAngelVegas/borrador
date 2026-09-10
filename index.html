@@ -142,6 +142,11 @@ flex-direction: column;
        text-align: center;
        }
 
+        #Leer1 {
+       font-size: 0%;
+       text-align: center;
+       }
+
    @keyframes SaltarIntroduccion {
   0% {opacity: 1; width: 100%; height: 100%;}
   95% {opacity: 1; width: 100%; height: 100%;}
@@ -265,6 +270,8 @@ flex-direction: column;
 
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 <p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>   
+
+<p id="Leer1"> Leer </p>
 
 <p id="Descripcion1"> Este es un libro de biología ficticio escrito por una criatura que es la última de su especie. </p>
 <p id="DejaComentario"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
@@ -503,7 +510,9 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
        }
        
         function input() {
-        
+
+                document.getElementById("Leer1").style.visibility = "visible";
+    document.getElementById("Leer1").style.fontSize = "50px";
         
  document.getElementById("escribirTexto").style.visibility = "visible";
     document.getElementById("escribirTexto").style.fontSize = "20px";
