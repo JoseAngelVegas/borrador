@@ -268,7 +268,7 @@ flex-direction: column;
 
 <p id="Descripcion1"> Este es un libro de biología ficticio escrito por una criatura que es la última de su especie. </p>
 <p id="DejaComentario"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
-<p id="Enviado"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
+<p id="Enviado"> ¡Enviado! </p>   
 
 <form name="formulario" method="post" action="https://script.google.com/macros/s/AKfycbzRde1ZZvK0DygQyOKX03ZPIxm2CM0mZlgZeHx6bx-I2n1Y_eItBRHVTzc0cBgGceDz/exec">
 
@@ -543,9 +543,6 @@ document.getElementById("Texto").style.animation = "TextoSalto";
 document.getElementById("Empezar").style.animation = "EmpezarSalto";
        document.getElementById("Empezar").style.animationPlayState = "running";
         document.getElementById("Empezar").style.animationFillMode = "both";
-        
-document.getElementById("Descripcion1").style.fontSize = "20px";
-document.getElementById("DejaComentario").style.fontSize = "15px";
 
 
 
@@ -561,11 +558,17 @@ document.getElementById("DejaComentario").style.fontSize = "15px";
                   document.getElementById("label").style.visibility = "hidden";
                   document.getElementById("label").style.fontSize = "0px";
 
+                document.getElementById("DejaComentario").style.visibility = "hidden";
+document.getElementById("DejaComentario").style.fontSize = "0px
+
 
 document.getElementById("reset").style.visibility = "hidden";
    document.getElementById("reset").style.fontSize = "0px";
     
   document.getElementById("submit").style.visibility = "hidden";
+  document.getElementById("submit").style.fontSize = "0px";
+
+                document.getElementById("DejaComentario").style.visibility = "hidden";
   document.getElementById("submit").style.fontSize = "0px";
 
         }
