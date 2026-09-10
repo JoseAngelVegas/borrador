@@ -43,32 +43,6 @@
   animation-fill-mode: both;
 }
 
-.input {
-  position: relative;
-  background-color: white;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2.5px;
-  font-size: 50px;
-}
-
-       .submit {
-  position: relative;
-  background-color: white;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2.5px;
-  font-size: 50px;
-}
-
-  .reset {
-  position: relative;
-  background-color: white;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2.5px;
-  font-size: 50px;
-}
   
   #Letrero {
   animation-play-state: paused;
@@ -242,12 +216,12 @@ flex-direction: column;
 
 <form name="formulario" method="post" action="https://script.google.com/macros/s/AKfycbzRde1ZZvK0DygQyOKX03ZPIxm2CM0mZlgZeHx6bx-I2n1Y_eItBRHVTzc0cBgGceDz/exec">
 
-<input name="Comentarios" class="input" id="escribirTexto" type="text" placeholder="Escribe tu publicación" maxlenght="50"/>
+<input name="Comentarios" class="Comentario" id="escribirTexto" type="text" placeholder="Escribe tu publicación" maxlenght="50"/>
 
 <label for="publicacion" class="placeholder" class="inicio"></label>
 
-<button type="submit" class="submit">Enviar publicación</button>
-<input type="reset" class="reset" value="Borrar">
+<button type="submit" class="Comentario">Enviar publicación</button>
+<input type="reset" class="Comentario" value="Borrar">
        
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
@@ -440,13 +414,13 @@ document.getElementById("Empezar").style.animationPlayState = "running";
 
        function mentePrint() {
        
-             document.getElementById("ElegirEpisodio").style.fontSize = "500%";
+       document.getElementById("ElegirEpisodio").style.fontSize = "500%";
              
-           document.getElementById("Episodio1").style.fontSize = "300%";
+       document.getElementById("Episodio1").style.fontSize = "300%";
            
-                                                document.getElementById("Episodio2").style.fontSize = "300%";
+       document.getElementById("Episodio2").style.fontSize = "300%";
 
-                                                document.getElementById("Episodio3").style.fontSize = "300%";
+       document.getElementById("Episodio3").style.fontSize = "300%";
 
        
        
@@ -476,6 +450,8 @@ document.getElementById("Texto").style.animationFillMode = "both";
  const boton1 = document.querySelector('#Episodio1');
   const boton2 = document.querySelector('#Episodio2');
   const boton3 = document.querySelector('#Episodio3');
+
+  const boton4 = document.querySelector('#Libro1');
   
 const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
 const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
@@ -483,6 +459,9 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
  
  const texto1 = document.querySelectorAll('.MenteDePrintPaginas');
   const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
+
+ const comentario = document.querySelectorAll('.Comentarios');
+
 
 
         boton1.addEventListener('click', function() {
@@ -502,6 +481,12 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
                 episodio3Paginas.classList.toggle('mostrar');
             });
         });
+
+
+         boton4.addEventListener('click', function() {
+            comentario.forEach(function(comentariosFuncion) {
+                comentariosFuncion.classList.toggle('mostrar');
+            });
 
               
        }
@@ -620,6 +605,50 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
         height: auto !important;
         animation: Paginas 2s both;
        }
+
+       .input {
+  position: relative;
+   width: 0% !important;
+   height: auto !important;
+    margin: 0 auto;
+   border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2.5px;
+  font-size: 50px;
+}
+
+         .input.mostrar {
+  position: relative;
+   width: 50% !important;
+   height: auto !important;
+    margin: 0 auto;
+   border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2.5px;
+  font-size: 50px;
+}
+
+       .submit {
+  position: relative;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2.5px;
+  font-size: 50px;
+}
+
+  .reset {
+  position: relative;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2.5px;
+  font-size: 50px;
+}
 
 
 
