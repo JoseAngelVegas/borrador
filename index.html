@@ -218,7 +218,7 @@ flex-direction: column;
 
 <input name="Comentarios" class="Comentario" id="escribirTexto" type="text" placeholder="Escribe tu publicación" maxlenght="50"/>
 
-<label for="publicacion" class="placeholder" class="inicio"></label>
+<label for="publicacion" class="Comentario" class="inicio"></label>
 
 <button type="submit" class="Comentario">Enviar publicación</button>
 <input type="reset" class="Comentario" value="Borrar">
@@ -607,20 +607,21 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
         animation: Paginas 2s both;
        }
 
-       .input {
+       .Comentario {
   position: relative;
+  display: flex;
    width: 0% !important;
-   height: auto !important;
-    margin: 0 auto;
-   border-radius: 25px;
+   height: 0% !important;
+   margin: 0 auto;
+   border-radius: 5px;
   background-color: white;
+  visibility: hidden;
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2.5px;
-  font-size: 50px;
+  box-shadow: 0px 0px 0px;
+  font-size: 0px;
 }
 
-         .input.mostrar {
+         .Comentario.mostrar {
   position: relative;
    width: 50% !important;
    height: auto !important;
@@ -628,24 +629,7 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
    border-radius: 25px;
   background-color: white;
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2.5px;
-  font-size: 50px;
-}
-
-       .submit {
-  position: relative;
-  background-color: white;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2.5px;
-  font-size: 50px;
-}
-
-  .reset {
-  position: relative;
-  background-color: white;
-  text-align: center;
+    visibility: visible;
   border-radius: 5px;
   box-shadow: 0px 0px 2.5px;
   font-size: 50px;
