@@ -153,6 +153,11 @@ flex-direction: column;
         border-radius: 25px;
          }
 
+        #Cerrar {
+       font-size: 0%;
+       text-align: center;
+         }
+
    @keyframes SaltarIntroduccion {
   0% {opacity: 1; width: 100%; height: 100%;}
   95% {opacity: 1; width: 100%; height: 100%;}
@@ -276,6 +281,9 @@ flex-direction: column;
 
 <p class="CositasMas" id="TerminosYCondiciones"> Términos y Condiciones. </p>
 <p class="CositasMas" id="PoliticaDePrivacidad"> Política de privacidad. </p>   
+
+
+<p id="Cerrar" onclick="cerrar()"> X </p>
 
 <p id="Leer1"> Leer </p>
 
@@ -560,6 +568,9 @@ document.getElementById("Empezar").style.animation = "EmpezarSalto";
         document.getElementById("Empezar").style.animationFillMode = "both";
 
                
+ document.getElementById("Cerrar").style.visibility = "hidden";
+  document.getElementById("Cerrar").style.fontSize = "0px";
+               
         }
        
         function enviado() {
@@ -588,7 +599,7 @@ document.getElementById("reset").style.visibility = "hidden";
 
        
        
- function Cerrar() {
+ function cerrar() {
        
        document.getElementById("Letrero").style.animation = "AnimacionLetrero";
        document.getElementById("Letrero").style.animationPlayState = "running";
