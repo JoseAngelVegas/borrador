@@ -463,6 +463,11 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
        
         function input() {
 
+const botonBiologiaCerrar = document.querySelector('#Cerrar');
+
+               const paginasBiologiaCerrar = document.querySelectorAll('.Biologia');
+
+
                  const botonBiologia = document.querySelector('#Leer1');
 
                const paginasBiologia = document.querySelectorAll('.Biologia');
@@ -470,6 +475,13 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
                         botonBiologia.addEventListener('click', function() {
             paginasBiologia.forEach(function(biologiaPaginas) {
                 biologiaPaginas.classList.toggle('mostrar');
+            });
+        });
+
+
+botonBiologiaCerrar.addEventListener('click', function() {
+            paginasBiologiaCerrar.forEach(function(biologiaPaginasCerrar) {
+                biologiaPaginasCerrar.classList.toggle('esconder');
             });
         });
 
@@ -550,18 +562,6 @@ document.getElementById("reset").style.visibility = "hidden";
        
        
  function cerrar() {
-
-const botonBiologiaCerrar = document.querySelector('#Cerrar');
-
-               const paginasBiologiaCerrar = document.querySelectorAll('.Biologia');
-
-                        botonBiologiaCerrar.addEventListener('click', function() {
-            paginasBiologiaCerrar.forEach(function(biologiaPaginasCerrar) {
-                biologiaPaginasCerrar.classList.toggle('esconder');
-            });
-        });
-
-
        
        document.getElementById("Letrero").style.animation = "AnimacionLetrero";
        document.getElementById("Letrero").style.animationPlayState = "running";
