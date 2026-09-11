@@ -443,6 +443,13 @@ const paginasBiologia = document.querySelectorAll('.Biologia');
  const texto1 = document.querySelectorAll('.MenteDePrintPaginas');
   const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
 
+                            botonBiologia.addEventListener('click', function() {
+            paginasBiologia.forEach(function(biologiaPaginas) {
+                biologiaPaginas.classList.toggle('mostrar');
+            });
+        });
+
+       }
 
         boton1.addEventListener('click', function() {
             paginas1.forEach(function(episodio1Paginas) {
@@ -462,13 +469,6 @@ const paginasBiologia = document.querySelectorAll('.Biologia');
             });
         });
 
-              botonBiologia.addEventListener('click', function() {
-            paginasBiologia.forEach(function(biologiaPaginas) {
-                biologiaPaginas.classList.toggle('mostrar');
-            });
-        });
-
-       }
        
         function input() {
 
