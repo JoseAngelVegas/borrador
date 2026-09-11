@@ -286,6 +286,7 @@ flex-direction: column;
 <p id="Cerrar" onclick="cerrar()"> X </p>
 
 <button id="Leer1"> Leer </button>
+<button id="Esconder1"> Esconder </button>
 
 <p id="Descripcion1"> Este es un libro de biología ficticio escrito por una criatura que es la última de su especie. </p>
 <p id="DejaComentario"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
@@ -466,9 +467,19 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
 
                  const botonBiologia = document.querySelector('#Leer1');
 
+const botonBiologiaEsconder = document.querySelector('#Esconder1');
+
                const paginasBiologia = document.querySelectorAll('.Biologia');
 
                         botonBiologia.addEventListener('click', function() {
+            paginasBiologia.forEach(function(biologiaPaginas) {
+                biologiaPaginas.classList.toggle('mostrar');
+            });
+        });
+
+
+
+botonBiologiaEsconder.addEventListener('click', function() {
             paginasBiologia.forEach(function(biologiaPaginas) {
                 biologiaPaginas.classList.toggle('mostrar');
             });
