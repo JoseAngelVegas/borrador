@@ -431,10 +431,14 @@ document.getElementById("Cerrar").style.visibility = "visible";
   const boton2 = document.querySelector('#Episodio2');
   const boton3 = document.querySelector('#Episodio3');
 
+  const botonBiologia = document.querySelector('#Leer1');
+
   
 const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
 const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
 const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
+
+const paginasBiologia = document.querySelectorAll('.Biologia');
  
  const texto1 = document.querySelectorAll('.MenteDePrintPaginas');
   const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
@@ -455,6 +459,12 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
        boton3.addEventListener('click', function() {
             paginas3.forEach(function(episodio3Paginas) {
                 episodio3Paginas.classList.toggle('mostrar');
+            });
+        });
+
+              botonBiologia.addEventListener('click', function() {
+            paginasBiologia.forEach(function(biologiaPaginas) {
+                biologiaPaginas.classList.toggle('mostrar');
             });
         });
 
