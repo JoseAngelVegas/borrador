@@ -430,26 +430,16 @@ document.getElementById("Cerrar").style.visibility = "visible";
  const boton1 = document.querySelector('#Episodio1');
   const boton2 = document.querySelector('#Episodio2');
   const boton3 = document.querySelector('#Episodio3');
-
-  const botonBiologia = document.querySelector('#Leer1');
-
   
 const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
 const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
 const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
-
-const paginasBiologia = document.querySelectorAll('.Biologia');
  
  const texto1 = document.querySelectorAll('.MenteDePrintPaginas');
   const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
 
-                            botonBiologia.addEventListener('click', function() {
-            paginasBiologia.forEach(function(biologiaPaginas) {
-                biologiaPaginas.classList.toggle('mostrar');
-            });
-        });
 
-       }
+       
 
         boton1.addEventListener('click', function() {
             paginas1.forEach(function(episodio1Paginas) {
@@ -468,9 +458,21 @@ const paginasBiologia = document.querySelectorAll('.Biologia');
                 episodio3Paginas.classList.toggle('mostrar');
             });
         });
-
+              
+       }
        
         function input() {
+
+                 const botonBiologia = document.querySelector('#Leer1');
+
+               const paginasBiologia = document.querySelectorAll('.Biologia');
+
+                        botonBiologia.addEventListener('click', function() {
+            paginasBiologia.forEach(function(biologiaPaginas) {
+                biologiaPaginas.classList.toggle('mostrar');
+            });
+        });
+
 
                 document.getElementById("Leer1").style.visibility = "visible";
     document.getElementById("Leer1").style.fontSize = "50px";
