@@ -132,19 +132,21 @@ flex-direction: column;
 #Descripcion1 {
        font-size: 0%;
        text-align: center;
-       transform: translateY(10%);
        }
        
   #DejaComentario {
        font-size: 0%;
        text-align: center;
-       transform: translateY(10%);
+  }
+  
+   #submit {
+       font-size: 0%;
+       text-align: center;
   }
        
         #Enviado {
        font-size: 0%;
        text-align: center;
-       transform: translateY(10%);
        }
 
         #Leer1 {
@@ -155,7 +157,6 @@ flex-direction: column;
         visibility: hidden;
       margin: 0 auto;
       display: flex;
-   transform: translateY(10%);
          }
 
         #Cerrar {
@@ -307,7 +308,7 @@ flex-direction: column;
 
 <label for="publicacion" class="Comentario" id="label"></label>
 
-<button type="submit" class="Comentario" id="submit" onclick="enviado()">Enviar</button>
+<button type="submit" class="Comentario" id="submit" onclick="enviado()"> </button>
 
 <input type="reset" class="Comentario" id="reset" value="Borrar">
 
@@ -827,11 +828,12 @@ document.getElementById("Leer1").style.visibility = "hidden";
   document.getElementById("ElegirEpisodio").style.visibility = "hidden";
     document.getElementById("ElegirEpisodio").style.fontSize = "0px";
 
-               const cerrarInicio = document.querySelectorAll(".TyC, .Pv, .Biologia");
+
+       const cerrarInicio = document.querySelectorAll(".TyC, .Pv, .Biologia, .MenteDePrint,");
       for (let i = 0; i < cerrarInicio.length; i++) {
          cerrarInicio[i].style.fontSize = "0px";
-       cerrarInicio[i].style.width = "0px";
-       cerrarInicio[i].style.height = "0px";
+         cerrarInicio[i].style.height = "0px";
+         cerrarInicio[i].style.width = "0px";
          cerrarInicio[i].style.visibility = "hidden";
          
 
