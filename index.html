@@ -771,7 +771,7 @@ document.getElementById("Leer1").style.visibility = "hidden";
   document.getElementById("ElegirEpisodio").style.visibility = "hidden";
     document.getElementById("ElegirEpisodio").style.fontSize = "0px";
 
-               const cerrarInicio = document.querySelectorAll(".TyC");
+               const cerrarInicio = document.querySelectorAll(".TyC, .Pv");
       for (let i = 0; i < cerrarInicio.length; i++) {
          cerrarInicio[i].style.fontSize = "0px";
          cerrarInicio[i].style.visibility = "hidden";
@@ -842,6 +842,14 @@ document.getElementById("Texto").style.animationFillMode = "both";
 
         document.getElementById("Cerrar").style.visibility = "visible";
   document.getElementById("Cerrar").style.fontSize = "20px";
+
+          const abrirPv = document.querySelectorAll(".Pv");
+      for (let i = 0; i < abrirPv.length; i++) {
+         abrirPv[i].style.fontSize = "20px";
+         abrirPv[i].style.visibility = "visible";
+         
+
+}
 
 
 }
@@ -956,6 +964,14 @@ document.getElementById("Texto").style.animationFillMode = "both";
 }
 
         .TyC {
+  position: relative;
+  display: flex;
+   margin: 0 auto;
+    visibility: visible;
+  font-size: 0px;
+}
+
+          .Pv {
   position: relative;
   display: flex;
    margin: 0 auto;
