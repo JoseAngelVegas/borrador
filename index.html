@@ -505,6 +505,12 @@ const boton1Cerrar = document.querySelector('#Cerrar');
 
 const paginas1Cerrar = document.querySelectorAll('.MenteDePrintPaginas');
 
+              
+
+const boton2Cerrar = document.querySelector('#Cerrar');
+
+const paginas2Cerrar = document.querySelectorAll('.MenteDePrintPaginas2');
+
 
 
            
@@ -526,6 +532,12 @@ const paginas1Cerrar = document.querySelectorAll('.MenteDePrintPaginas');
        boton2.addEventListener('click', function() {
             paginas2.forEach(function(episodio2Paginas) {
                 episodio2Paginas.classList.toggle('mostrar');
+            });
+        });
+
+                  boton2Cerrar.addEventListener('click', function() {
+            paginas2Cerrar.forEach(function(episodio2PaginasCerrar) {
+                episodio2PaginasCerrar.classList.toggle('esconder');
             });
         });
 
