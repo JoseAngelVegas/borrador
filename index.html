@@ -424,26 +424,6 @@ document.getElementById("Empezar").style.animationPlayState = "running";
        function mentePrint() {
 
 
-              const boton1Cerrar = document.querySelector('#Episodio1');
-
-               const paginas1Cerrar = document.querySelectorAll('.MenteDePrintPaginas');
-
-
-                 const botonEpisodio1 = document.querySelector('#Episodio1');
-
-               const paginasEpisodio1 = document.querySelectorAll('.MenteDePrintPaginas');
-
-                         botonEpisodio1.addEventListener('click', function() {
-            paginasEpisodio1.forEach(function(episodio1Paginas) {
-                episodio1Paginas.classList.toggle('mostrar');
-            });
-        });
-
-                 boton1Cerrar.addEventListener('click', function() {
-            paginas1Cerrar.forEach(function(episodio1PaginasCerrar) {
-                episodio1PaginasCerrar.classList.toggle('esconder');
-            });
-        });
 
        
               document.getElementById("ElegirEpisodio").style.visibility = "visible";
@@ -497,6 +477,16 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
   const texto2 = document.querySelectorAll('.MenteDePrintPagina2s');
 
 
+
+              
+
+const boton1Cerrar = document.querySelector('#Episodio1');
+
+const paginas1Cerrar = document.querySelectorAll('.MenteDePrintPaginas');
+
+
+
+           
        
 
         boton1.addEventListener('click', function() {
@@ -504,6 +494,14 @@ const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
                 episodio1Paginas.classList.toggle('mostrar');
             });
         });
+
+             boton1Cerrar.addEventListener('click', function() {
+            paginas1Cerrar.forEach(function(episodio1PaginasCerrar) {
+                episodio1PaginasCerrar.classList.toggle('esconder');
+            });
+        });
+
+       
 
        boton2.addEventListener('click', function() {
             paginas2.forEach(function(episodio2Paginas) {
