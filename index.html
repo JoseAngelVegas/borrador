@@ -422,6 +422,50 @@ document.getElementById("Empezar").style.animationPlayState = "running";
 
 
        function mentePrint() {
+
+              const botonBiologiaCerrar = document.querySelector('#Cerrar');
+
+               const paginasBiologiaCerrar = document.querySelectorAll('.Biologia');
+
+
+                 const botonBiologia = document.querySelector('#Leer1');
+
+               const paginasBiologia = document.querySelectorAll('.Biologia');
+
+                        botonBiologia.addEventListener('click', function() {
+            paginasBiologia.forEach(function(biologiaPaginas) {
+                biologiaPaginas.classList.toggle('mostrar');
+            });
+        });
+
+              botonBiologiaCerrar.addEventListener('click', function() {
+            paginasBiologiaCerrar.forEach(function(biologiaPaginasCerrar) {
+                biologiaPaginasCerrar.classList.toggle('esconder');
+            });
+        });
+
+
+              const boton1Cerrar = document.querySelector('#Episodio1');
+
+               const paginas1Cerrar = document.querySelectorAll('.MenteDePrintPaginas');
+
+
+                 const botonEpisodio1 = document.querySelector('#Episodio1');
+
+               const paginasEpisodio1 = document.querySelectorAll('.MenteDePrintPaginas');
+
+                         botonEpisodio1.addEventListener('click', function() {
+            paginasEpisodioUno.forEach(function(episodio1Paginas) {
+                episodio1Paginas.classList.toggle('mostrar');
+            });
+        });
+
+                 boton1Cerrar.addEventListener('click', function() {
+            paginasEpisodio1.forEach(function(episodio1PaginasCerrar) {
+                episodio1PaginasCerrar.classList.toggle('esconder');
+            });
+        });
+
        
               document.getElementById("ElegirEpisodio").style.visibility = "visible";
     document.getElementById("ElegirEpisodio").style.fontSize = "80px";
@@ -792,6 +836,13 @@ document.getElementById("Texto").style.animationFillMode = "both";
         height: auto !important;
         animation: Paginas 1s both;
        }
+
+          .MenteDePrintPaginas.esconder {
+        width: 0% !important;
+        height: auto !important;
+        margin: 0 auto;
+        position: relative;
+        }
        
       
     .MenteDePrintPaginas2 {
