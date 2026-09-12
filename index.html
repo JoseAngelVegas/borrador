@@ -423,27 +423,6 @@ document.getElementById("Empezar").style.animationPlayState = "running";
 
        function mentePrint() {
 
-              const botonBiologiaCerrar = document.querySelector('#Cerrar');
-
-               const paginasBiologiaCerrar = document.querySelectorAll('.Biologia');
-
-
-                 const botonBiologia = document.querySelector('#Leer1');
-
-               const paginasBiologia = document.querySelectorAll('.Biologia');
-
-                        botonBiologia.addEventListener('click', function() {
-            paginasBiologia.forEach(function(biologiaPaginas) {
-                biologiaPaginas.classList.toggle('mostrar');
-            });
-        });
-
-              botonBiologiaCerrar.addEventListener('click', function() {
-            paginasBiologiaCerrar.forEach(function(biologiaPaginasCerrar) {
-                biologiaPaginasCerrar.classList.toggle('esconder');
-            });
-        });
-
 
               const boton1Cerrar = document.querySelector('#Episodio1');
 
@@ -455,13 +434,13 @@ document.getElementById("Empezar").style.animationPlayState = "running";
                const paginasEpisodio1 = document.querySelectorAll('.MenteDePrintPaginas');
 
                          botonEpisodio1.addEventListener('click', function() {
-            paginasEpisodioUno.forEach(function(episodio1Paginas) {
+            paginasEpisodio1.forEach(function(episodio1Paginas) {
                 episodio1Paginas.classList.toggle('mostrar');
             });
         });
 
                  boton1Cerrar.addEventListener('click', function() {
-            paginasEpisodio1.forEach(function(episodio1PaginasCerrar) {
+            paginas1Cerrar.forEach(function(episodio1PaginasCerrar) {
                 episodio1PaginasCerrar.classList.toggle('esconder');
             });
         });
