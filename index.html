@@ -585,9 +585,9 @@ document.getElementById("reset").style.visibility = "hidden";
        
  function cerrar() {
        
-       document.getElementById("Letrero").style.animation = "AnimacionLetrero";
-       document.getElementById("Letrero").style.animationPlayState = "running";
-        document.getElementById("Letrero").style.animationFillMode = "both";
+document.getElementById("Letrero").style.animation = "AnimacionLetrero";
+document.getElementById("Letrero").style.animationPlayState = "running";
+document.getElementById("Letrero").style.animationFillMode = "both";
         
           document.getElementById("Libro1").style.animation = "Libro";
        document.getElementById("Libro1").style.animationPlayState = "running";
@@ -691,6 +691,14 @@ document.getElementById("Texto").style.animationFillMode = "both";
 
         document.getElementById("Cerrar").style.visibility = "visible";
   document.getElementById("Cerrar").style.fontSize = "20px";
+
+         const abrirTyC = document.querySelectorAll(".TyC");
+      for (let i = 0; i < abrirTyC.length; i++) {
+         abrirTyC[i].style.fontSize = "20px";
+         abrirTyC[i].style.visibility = "visible";
+         
+
+}
 
 }
       
