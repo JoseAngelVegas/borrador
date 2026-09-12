@@ -387,6 +387,36 @@ flex-direction: column;
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/18%20E2.jpg?raw=true">
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/19%20E2.jpg?raw=true">
 
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/2%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/3%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/4%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/5%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/6%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/7%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/8%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/9%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/10%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/11%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/12%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/13%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/14%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/15%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/16%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/17%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/18%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/19%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/20%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/21%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/22%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/23%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/24%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/25%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/26%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/27%20E3.jpg?raw=true">
+<img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/28%20E3.jpg?raw=true">
+
+
 
 
 <p class="TyC" id="TyC1">Terminos Y Condiciones</p>
@@ -560,6 +590,11 @@ const boton2Cerrar = document.querySelector('#Cerrar');
 
 const paginas2Cerrar = document.querySelectorAll('.MenteDePrintPaginas2');
 
+              
+
+const boton3Cerrar = document.querySelector('#Cerrar');
+
+const paginas3Cerrar = document.querySelectorAll('.MenteDePrintPaginas3');
 
 
            
@@ -593,6 +628,13 @@ const paginas2Cerrar = document.querySelectorAll('.MenteDePrintPaginas2');
        boton3.addEventListener('click', function() {
             paginas3.forEach(function(episodio3Paginas) {
                 episodio3Paginas.classList.toggle('mostrar');
+            });
+        });
+
+
+           boton3Cerrar.addEventListener('click', function() {
+            paginas3Cerrar.forEach(function(episodio3PaginasCerrar) {
+                episodio3PaginasCerrar.classList.toggle('esconder');
             });
         });
               
@@ -951,6 +993,14 @@ document.getElementById("Texto").style.animationFillMode = "both";
         height: auto !important;
         animation: Paginas 2s both;
        }
+
+       .MenteDePrintPaginas3.esconder {
+        width: 0% !important;
+        height: auto !important;
+        margin: 0 auto;
+        position: relative;
+        
+        }
 
        .Comentario {
   position: relative;
