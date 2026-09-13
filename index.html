@@ -261,12 +261,6 @@ flex-direction: column;
 
 <p class="ElegirEpisodio" id="ElegirEpisodio"> Elegir episodios. </p>
 
-<button class="ElegirEpisodio" id="Episodio1" onclick="Episodio1"> Episodio 1 </button>
-
-<button class="ElegirEpisodio" id="Episodio2"> Episodio 2</button>
-
-<button class="ElegirEpisodio" id="Episodio3"> Episodio 3 </button>
-
 
 
 <video autoplay muted loop playsinline webkit-playsinline id="Empezar" class="Empezar" onclick="mentePrint()">
@@ -370,6 +364,7 @@ flex-direction: column;
 <img class="Biologia"  src="https://github.com/JoseAngelVegas/borrador/blob/main/0.49.jpg?raw=true">
 <img class="Biologia"  src="https://github.com/JoseAngelVegas/borrador/blob/main/0.50.jpg?raw=true">
 
+<button class="ElegirEpisodio" id="Episodio1" onclick="Episodio1"> Episodio 1 </button>
 
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1%20E1.jpg?raw=true">
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/2%20E1.jpg?raw=true">
@@ -383,6 +378,8 @@ flex-direction: column;
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/10%20E1.jpg?raw=true">
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/11%20E1.jpg?raw=true">
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/12%20E1.jpg?raw=true">
+
+<button class="ElegirEpisodio" id="Episodio2"> Episodio 2</button>
 
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1%20E2.jpg?raw=true">
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/2%20E2.jpg?raw=true">
@@ -403,6 +400,8 @@ flex-direction: column;
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/17%20E2.jpg?raw=true">
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/18%20E2.jpg?raw=true">
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/19%20E2.jpg?raw=true">
+
+<button class="ElegirEpisodio" id="Episodio3"> Episodio 3 </button>
 
 <img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1%20E3.jpg?raw=true">
 <img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/2%20E3.jpg?raw=true">
@@ -522,12 +521,12 @@ fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
        
 <script>
 
-       const boton1 = document.querySelector('#Episodio1');
+const boton1 = document.querySelector('#Episodio1');
 const boton2 = document.querySelector('#Episodio2');
 const boton3 = document.querySelector('#Episodio3');
 const botonCerrar = document.querySelector('#Cerrar');
 
-       const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
+const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
 const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
 const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
 
