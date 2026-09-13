@@ -522,6 +522,39 @@ fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
        
 <script>
 
+       const boton1 = document.querySelector('#Episodio1');
+const boton2 = document.querySelector('#Episodio2');
+const boton3 = document.querySelector('#Episodio3');
+const botonCerrar = document.querySelector('#Cerrar');
+
+       const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
+const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
+const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
+
+       boton1.addEventListener('click', function() {
+    paginas1.forEach(p => p.classList.add('mostrar'));
+    paginas1.forEach(p => p.classList.remove('esconder'));
+});
+
+boton2.addEventListener('click', function() {
+    paginas2.forEach(p => p.classList.add('mostrar'));
+    paginas2.forEach(p => p.classList.remove('esconder'));
+});
+
+boton3.addEventListener('click', function() {
+    paginas3.forEach(p => p.classList.add('mostrar'));
+    paginas3.forEach(p => p.classList.remove('esconder'));
+});
+
+botonCerrar.addEventListener('click', function() {
+    [paginas1, paginas2, paginas3].forEach(grupo => {
+        grupo.forEach(p => {
+            p.classList.remove('mostrar');
+            p.classList.add('esconder');
+        });
+    });
+});
+
 
 function saltarIntroduccion() {
     document.getElementById("Introduccion").style.animationPlayState = "running";
@@ -540,115 +573,39 @@ document.getElementById("Empezar").style.animationPlayState = "running";
 
 
 
-       
-              document.getElementById("ElegirEpisodio").style.visibility = "visible";
+       document.getElementById("ElegirEpisodio").style.visibility = "visible";
     document.getElementById("ElegirEpisodio").style.fontSize = "80px";
-   
 
-       
-       
-       
- document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
-document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
+    document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
+    document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
 
- document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
-document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
+    document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
+    document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
 
-       document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto";
-       
-document.getElementById("Letrero").style.animationFillMode = "both";
+    document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto";
+    document.getElementById("Letrero").style.animationFillMode = "both";
 
-       document.getElementById("Libro1").style.animation = "LibroSaltar";
-document.getElementById("Libro1").style.animationFillMode = "both";
+    document.getElementById("Libro1").style.animation = "LibroSaltar";
+    document.getElementById("Libro1").style.animationFillMode = "both";
 
-  document.getElementById("Texto").style.animation = "TextoSalto";
-document.getElementById("Texto").style.animationFillMode = "both";
- 
-  document.getElementById("Empezar").style.animation = "EmpezarSalto";
-      document.getElementById("Empezar").style.animationFillMode = "both";
+    document.getElementById("Texto").style.animation = "TextoSalto";
+    document.getElementById("Texto").style.animationFillMode = "both";
+  
+    document.getElementById("Empezar").style.animation = "EmpezarSalto";
+    document.getElementById("Empezar").style.animationFillMode = "both";
+
+    document.getElementById("Cerrar").style.visibility = "visible";
+    document.getElementById("Cerrar").style.fontSize = "20px";
       
-
-document.getElementById("Cerrar").style.visibility = "visible";
-  document.getElementById("Cerrar").style.fontSize = "20px";
-      
-   document.getElementById("Episodio1").style.visibility = "visible";
-  document.getElementById("Episodio1").style.fontSize = "50px";
+    document.getElementById("Episodio1").style.visibility = "visible";
+    document.getElementById("Episodio1").style.fontSize = "50px";
   
-  document.getElementById("Episodio2").style.visibility = "visible";
-  document.getElementById("Episodio2").style.fontSize = "50px";
+    document.getElementById("Episodio2").style.visibility = "visible";
+    document.getElementById("Episodio2").style.fontSize = "50px";
   
-  document.getElementById("Episodio3").style.visibility = "visible";
-  document.getElementById("Episodio3").style.fontSize = "50px";
-    
- const boton1 = document.querySelector('#Episodio1');
-  const boton2 = document.querySelector('#Episodio2');
-  const boton3 = document.querySelector('#Episodio3');
-  
-const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
-const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
-const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
-
-              
-
-const boton1Cerrar = document.querySelector('#Cerrar');
-
-const paginas1Cerrar = document.querySelectorAll('.MenteDePrintPaginas');
-
-              
-
-const boton2Cerrar = document.querySelector('#Cerrar');
-
-const paginas2Cerrar = document.querySelectorAll('.MenteDePrintPaginas2');
-
-              
-
-const boton3Cerrar = document.querySelector('#Cerrar');
-
-const paginas3Cerrar = document.querySelectorAll('.MenteDePrintPaginas3');
-
-
-           
-       
-
-        boton1.addEventListener('click', function() {
-            paginas1.forEach(function(episodio1Paginas) {
-                episodio1Paginas.classList.toggle('mostrar');
-            });
-        });
-
-                 boton1Cerrar.addEventListener('click', function() {
-            paginas1Cerrar.forEach(function(episodio1PaginasCerrar) {
-                episodio1PaginasCerrar.classList.toggle('mostrar');
-            });
-        });
-       
-
-       boton2.addEventListener('click', function() {
-            paginas2.forEach(function(episodio2Paginas) {
-                episodio2Paginas.classList.toggle('mostrar');
-            });
-        });
-
-                  boton2Cerrar.addEventListener('click', function() {
-            paginas2Cerrar.forEach(function(episodio2PaginasCerrar) {
-                episodio2PaginasCerrar.classList.toggle('esconder');
-            });
-        });
-
-       boton3.addEventListener('click', function() {
-            paginas3.forEach(function(episodio3Paginas) {
-                episodio3Paginas.classList.toggle('mostrar');
-            });
-        });
-
-
-           boton3Cerrar.addEventListener('click', function() {
-            paginas3Cerrar.forEach(function(episodio3PaginasCerrar) {
-                episodio3PaginasCerrar.classList.toggle('esconder');
-            });
-        });
-              
-       }
+    document.getElementById("Episodio3").style.visibility = "visible";
+    document.getElementById("Episodio3").style.fontSize = "50px";
+}
        
         function input() {
 
