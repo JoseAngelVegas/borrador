@@ -535,6 +535,9 @@ const paginas1 = document.querySelectorAll('.MenteDePrintPaginas');
 const paginas2 = document.querySelectorAll('.MenteDePrintPaginas2');
 const paginas3 = document.querySelectorAll('.MenteDePrintPaginas3');
 
+const botonBiologia = document.querySelector('#Leer1');
+const paginasBiologia = document.querySelectorAll('.Biologia');
+
        boton1.addEventListener('click', function() {
     paginas1.forEach(p => p.classList.add('mostrar'));
     paginas1.forEach(p => p.classList.remove('esconder'));
@@ -550,8 +553,13 @@ boton3.addEventListener('click', function() {
     paginas3.forEach(p => p.classList.remove('esconder'));
 });
 
+botonBiologia.addEventListener('click', function() {
+    paginasBiologia.forEach(p => p.classList.add('mostrar'));
+    paginasBiologia.forEach(p => p.classList.remove('esconder'));
+});
+
 botonCerrar.addEventListener('click', function() {
-    [paginas1, paginas2, paginas3].forEach(grupo => {
+    [paginas1, paginas2, paginas3, paginasBiologia].forEach(grupo => {
         grupo.forEach(p => {
             p.classList.remove('mostrar');
             p.classList.add('esconder');
@@ -612,29 +620,6 @@ document.getElementById("Empezar").style.animationPlayState = "running";
 }
        
         function input() {
-
-const botonBiologiaCerrar = document.querySelector('#Cerrar');
-
-               const paginasBiologiaCerrar = document.querySelectorAll('.Biologia');
-
-
-                 const botonBiologia = document.querySelector('#Leer1');
-
-               const paginasBiologia = document.querySelectorAll('.Biologia');
-
-                        botonBiologia.addEventListener('click', function() {
-            paginasBiologia.forEach(function(biologiaPaginas) {
-                biologiaPaginas.classList.toggle('mostrar');
-            });
-        });
-
-
-botonBiologiaCerrar.addEventListener('click', function() {
-            paginasBiologiaCerrar.forEach(function(biologiaPaginasCerrar) {
-                biologiaPaginasCerrar.classList.toggle('esconder');
-            });
-        });
-
 
 
                 document.getElementById("Leer1").style.visibility = "visible";
