@@ -29,9 +29,9 @@
   padding: 0;
 }      
 
-       .Espacio {
+       #EspacioBiologia {
   display: grid;
-  gap: 20px;
+  gap: 0px;
 }
       
   #saltar {
@@ -304,7 +304,7 @@ flex-direction: column;
 <button id="Cerrar" onclick="cerrar()"> X </button>
 
 
-<button id="Leer1"> Leer </button>
+<button id="Leer1" onclick="Leer1()"> Leer </button>
 
 <p id="Descripcion1"> Este es un libro de biología ficticio escrito por una criatura que es la última de su especie. </p>
 <p id="DejaComentario"> ¡Envía un mensaje dando tu opinión de este eBook para mejorarlo! </p>   
@@ -322,7 +322,7 @@ flex-direction: column;
 
 </form>
         
-<div class="Espacio">
+<div id="EspacioBiologia">
 
 <img class="Biologia"  src="https://github.com/JoseAngelVegas/borrador/blob/main/0.1.jpg?raw=true">
 <img class="Biologia"  src="https://github.com/JoseAngelVegas/borrador/blob/main/0.2.jpg?raw=true">
@@ -699,7 +699,11 @@ document.getElementById("reset").style.visibility = "hidden";
 
 
         }
-
+        
+              function Leer1() {
+  document.getElementById("EspacioBiologia").style.gap = "20px";
+  
+  }
 
        
        
