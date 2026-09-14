@@ -33,6 +33,21 @@
   display: grid;
   gap: 0px;
 }
+
+#Espacio1 {
+  display: grid;
+  gap: 0px;
+}
+
+#Espacio2 {
+  display: grid;
+  gap: 0px;
+}
+
+#Espacio3 {
+  display: grid;
+  gap: 0px;
+}
       
   #saltar {
   position: relative;
@@ -378,7 +393,9 @@ flex-direction: column;
 </div>
 
 
-<button class="ElegirEpisodio" id="Episodio1" onclick="Episodio1"> Episodio 1 </button>
+<button class="ElegirEpisodio" id="Episodio1" onclick="Episodio1()"> Episodio 1 </button>
+
+<div id="Espacio1">
 
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1%20E1.jpg?raw=true">
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/2%20E1.jpg?raw=true">
@@ -392,6 +409,10 @@ flex-direction: column;
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/10%20E1.jpg?raw=true">
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/11%20E1.jpg?raw=true">
 <img class="MenteDePrintPaginas"  src="https://github.com/JoseAngelVegas/borrador/blob/main/12%20E1.jpg?raw=true">
+
+</div>
+
+<div id="Espacio2" onclick="Episodio2()">
 
 <button class="ElegirEpisodio" id="Episodio2"> Episodio 2</button>
 
@@ -415,7 +436,12 @@ flex-direction: column;
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/18%20E2.jpg?raw=true">
 <img class="MenteDePrintPaginas2"  src="https://github.com/JoseAngelVegas/borrador/blob/main/19%20E2.jpg?raw=true">
 
-<button class="ElegirEpisodio" id="Episodio3"> Episodio 3 </button>
+</div>
+
+
+<button class="ElegirEpisodio" id="Episodio3" onclick="Episodio3()"> Episodio 3 </button>
+
+<div id="Espacio3">
 
 <img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/1%20E3.jpg?raw=true">
 <img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/2%20E3.jpg?raw=true">
@@ -446,6 +472,7 @@ flex-direction: column;
 <img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/27%20E3.jpg?raw=true">
 <img class="MenteDePrintPaginas3"  src="https://github.com/JoseAngelVegas/borrador/blob/main/28%20E3.jpg?raw=true">
 
+</div>
 
 <p class="TyC" id="TyC1">Terminos Y Condiciones</p>
 
@@ -704,6 +731,21 @@ document.getElementById("reset").style.visibility = "hidden";
   document.getElementById("EspacioBiologia").style.gap = "20px";
   
   }
+  
+     function Episodio1() {
+  document.getElementById("Espacio1").style.gap = "20px";
+  
+  }
+  
+    function Episodio2() {
+  document.getElementById("Espacio2").style.gap = "20px";
+  
+  }
+  
+  function Episodio3() {
+  document.getElementById("Espacio3").style.gap = "20px";
+  
+  }
 
        
        
@@ -781,6 +823,12 @@ document.getElementById("Leer1").style.visibility = "hidden";
     document.getElementById("ElegirEpisodio").style.fontSize = "0px";
 
           document.getElementById("EspacioBiologia").style.gap = "0px";
+          
+         document.getElementById("Espacio1").style.gap = "0px";
+         
+         document.getElementById("Espacio2").style.gap = "0px";
+
+         document.getElementById("Espacio3").style.gap = "0px";
 
 
        const cerrarInicio = document.querySelectorAll(".TyC, .Pv, .MenteDePrintPaginas, .MenteDePrintPaginas2, .MenteDePrintPaginas3");
