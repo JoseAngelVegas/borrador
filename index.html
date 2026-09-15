@@ -165,26 +165,31 @@ flex-direction: column;
   #DejaComentario {
        font-size: 0%;
        text-align: center;
+       
   }
   
    #submit {
-       font-size: 0%;
-       text-align: center;
-        box-shadow: 0px 0px 5px black;
-        border-radius: 25px;
-        visibility: hidden;
+         text-align: center;
+      font-size: 0px;
+      border-radius: 10px;
+      visibility: hidden;
       margin: 0 auto;
+      width: 100px;
+      height: 30px;
       display: flex;
+      background-color: #a4ff73;
   }
   
    #reset {
-       font-size: 0%;
+       font-size: 0px;
        text-align: center;
-        box-shadow: 0px 0px 5px black;
-        border-radius: 25px;
+        border-radius: 10px;
         visibility: hidden;
       margin: 0 auto;
+      width: 100px;
+      height: 30px;
       display: flex;
+      background-color: #ff7171;
   }
        
         #Enviado {
@@ -346,9 +351,9 @@ flex-direction: column;
 
 <label for="publicacion" class="Comentario" id="label"></label>
 
-<button type="submit" id="submit" onclick="enviado()">Hola</button>
+<button type="submit" id="submit" onclick="enviado()"></button>
 
-<input type="reset" id="reset" value="Borrar">
+<input type="reset" id="reset" value="">
 
 </form>
         
@@ -1046,12 +1051,12 @@ document.getElementById("Texto").style.animationFillMode = "both";
        .Comentario {
   position: relative;
   display: flex;
-   width: 50% !important;
-   height: auto !important;
    margin: 0 auto;
     visibility: hidden;
   text-align: center;
   font-size: 0px;
+    width: 50%;
+      height: 50%;
 }
 
         .TyC {
