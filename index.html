@@ -51,12 +51,12 @@
 
  #EspacioTyC {
   display: grid;
-  gap: 20px;
+  gap: 0px;
 }
 
 #EspacioPv {
   display: grid;
-  gap: 20px;
+  gap: 0px;
 }
       
   #saltar {
@@ -895,6 +895,8 @@ document.getElementById("Leer1").style.visibility = "hidden";
     }
 
 function TerminosYCondiciones() {
+
+document.getElementById("EspacioTyC").style.gap = "20px";
    
 
 document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
@@ -931,6 +933,8 @@ document.getElementById("Texto").style.animationFillMode = "both";
       
       
 function PoliticaDePrivacidad() {
+
+document.getElementById("EspacioPv").style.gap = "20px";
    
 
 document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
