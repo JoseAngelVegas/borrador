@@ -864,11 +864,18 @@ document.getElementById("Leer1").style.visibility = "hidden";
          document.getElementById("Espacio3").style.gap = "0px";
 
 
-       const cerrarInicio = document.querySelectorAll(".TyC, .Pv, .MenteDePrintPaginas, .MenteDePrintPaginas2, .MenteDePrintPaginas3");
+       const cerrarInicio = document.querySelectorAll(".MenteDePrintPaginas, .MenteDePrintPaginas2, .MenteDePrintPaginas3");
       for (let i = 0; i < cerrarInicio.length; i++) {
          cerrarInicio[i].style.fontSize = "0px";
          cerrarInicio[i].style.height = "0px";
          cerrarInicio[i].style.width = "0px";
+         
+
+}
+
+         const cerrarInicio2 = document.querySelectorAll(".TyC, .Pv");
+      for (let i = 0; i < cerrarInicio2.length; i++) {
+         cerrarInicio2[i].style.fontSize = "0px";
          
 
 }
