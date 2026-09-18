@@ -726,57 +726,6 @@ fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
       
    })
 </script>
-
-       <script>
-
-        const opcion = [
-        
-            { color: "#0b1e07" },
-            { color: "#0b1e07" },
-            { color: "#0b1e07" },
-            { color: "#0b1e07" },
-            { color: "#0b1e07" },
-            { color: "#5c7233" },
-            { color: "#5c7233" },
-            { color: "#5c7233" },
-            { color: "#5d8f4e" },
-            { color: "#5d8f4e" },
-            { color: "#5d8f4e" },
-            { color: "#88ff6f" },
-            { color: "#88ff6f" },
-            { color: "#88ff6f" },
-            { color: "#88ff6f" },
-            { color: "#88ff6f" },
-            { color: "#88ff6f" },
-            { color: "#5d8f4e" },
-            { color: "#5d8f4e" },
-            { color: "#5c7233" },
-            { color: "#0b1e07" },
-            { color: "#0b1e07" },
-            { color: "#0b1e07" },
-            { color: "#0b1e07" },
-            
-                    ]
-
-       function actualizarVideo() {
-            
-            const ahoraVideo = new Date();
-            const hora = ahoraVideo.getHours();
-
-            const cambio = Math.floor(hora / 1);
-
-            const seleccion = opcion[cambio];
-
-            document.body.style.backgroundColor = seleccion.color;
-            
-        }
-
-        actualizarColor();
-
-        setInterval(actualizarVideo, 10000);
-
-       </script>
-
        
 <script>
 
