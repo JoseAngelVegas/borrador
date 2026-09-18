@@ -71,6 +71,46 @@ object-fit: cover;
   display: grid;
   gap: 0px;
 }
+
+       .BotonesMar  {
+  --filter-hue-rotate: 0deg;
+  --filter-brightness: 1;
+  --filter-shadow: 0 0 0 transparent;
+  aspect-ratio: 1;
+  width: min(50vw, 100vh);
+    height: min(21vw, 100vh);
+  background: radial-gradient(40vh, rgba(49, 54, 109, 0.5), transparent),
+    radial-gradient(
+      circle 30vw at top,
+      rgba(1, 180, 210, 0.3),
+      #638ad4,
+      transparent
+    ),
+    
+    radial-gradient(circle 20vw at bottom, #2550aa, transparent);
+  font-size: min(8vw, 8vh);
+  border-radius: 50%;
+  border: none;
+  opacity: 0.5;
+  box-shadow: -10px 14px 24px -7px rgba(55, 254, 255, 0.82) inset,
+    5px -10px 18px 4px rgba(55, 254, 255, 0.22) inset;
+  
+  }
+
+span {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  
+  background-size: 200% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
       
   #saltar {
   position: relative;
