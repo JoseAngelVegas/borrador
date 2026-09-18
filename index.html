@@ -72,12 +72,16 @@ object-fit: cover;
   gap: 0px;
 }
 
+.BotonesMar {
+  margin: auto;
+  }
+  
        #Episodio1  {
   --filter-hue-rotate: 0deg;
   --filter-brightness: 1;
   --filter-shadow: 0 0 0 transparent;
   aspect-ratio: 1;
-  width: min(50vw, 100vh);
+  width: min(40vw, 100vh);
     height: min(21vw, 100vh);
   background: radial-gradient(40vh, rgba(49, 54, 109, 0.5), transparent),
     radial-gradient(
@@ -96,21 +100,25 @@ object-fit: cover;
     5px -10px 18px 4px rgba(55, 254, 255, 0.22) inset;
   
   }
+  
+  span {
+  margin: 0 auto;
 
-span {
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0.4) 0%,
     rgba(255, 255, 255, 0.9) 50%,
     rgba(255, 255, 255, 0.4) 100%
-  );
+      );
   
-  background-size: 200% auto;
+    background-size: 200% auto;
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+      
+  
       
   #saltar {
   position: relative;
@@ -491,7 +499,7 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 </div>
 
 
-<button class="ElegirEpisodio" id="Episodio1" onclick="Episodio1()"> Episodio 1 </button>
+<button class="ElegirEpisodio" id="Episodio1" onclick="Episodio1()"><span> 1 </span></button>
 
 <div id="Espacio1">
 
