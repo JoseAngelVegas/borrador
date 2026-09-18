@@ -18,8 +18,8 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 0%; 
-  min-height: 0%;
+  width: 0%; 
+  height: 0%;
 }
 
   #Introduccion {
@@ -652,8 +652,8 @@ botonCerrar.addEventListener('click', function() {
 
 function saltarIntroduccion() {
 
-    document.getElementById("myVideo").style.maxHeight = "100%";
-    document.getElementById("myVideo").style.maxWidth = "100%";
+    document.getElementById("myVideo").style.height = "100%";
+    document.getElementById("myVideo").style.width = "100%";
 
     document.getElementById("Introduccion").style.animationPlayState = "running";
     document.getElementById("saltar").style.animationPlayState = "running";
