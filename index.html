@@ -560,7 +560,7 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 
 </div>
 
-<p class="Texto" id="Creditos"> Créditos </p>
+<p class="Texto" id="Creditos" onclick="Creditos()"> Créditos </p>
 
 <p class="Creditos"> Creado por José Ángel Vegas </p>
 
@@ -1058,6 +1058,43 @@ document.getElementById("Creditos").style.animationFillMode = "both";
 
 }
 
+
+}
+       
+function Creditos() {
+
+       document.getElementById("EspacioPv").style.gap = "20px";
+   
+
+document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
+document.getElementById("PoliticaDePrivacidad").style.animationFillMode = "both";
+
+ document.getElementById("TerminosYCondiciones").style.animation = "CositasMasSalto";
+document.getElementById("TerminosYCondiciones").style.animationFillMode = "both";
+
+       document.getElementById("Letrero").style.animation = "AnimacionLetreroSalto";
+       
+document.getElementById("Letrero").style.animationFillMode = "both";
+
+       document.getElementById("Libro1").style.animation = "LibroSaltar";
+document.getElementById("Libro1").style.animationFillMode = "both";
+
+  document.getElementById("Texto").style.animation = "TextoSalto";
+document.getElementById("Texto").style.animationFillMode = "both";
+
+        document.getElementById("Creditos").style.animation = "TextoSalto";
+document.getElementById("Creditos").style.animationFillMode = "both";
+ 
+  document.getElementById("Empezar").style.animation = "EmpezarSalto";
+      document.getElementById("Empezar").style.animationFillMode = "both";
+
+        document.getElementById("Cerrar").style.visibility = "visible";
+  document.getElementById("Cerrar").style.fontSize = "20px";
+
+         const abrirCreditos = document.querySelectorAll(".Creditos");
+      for (let i = 0; i < abrirCreditos.length; i++) {
+         abrirCreditos[i].style.fontSize = "20px";
+         
 
 }
       
