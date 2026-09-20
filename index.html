@@ -148,6 +148,15 @@ position: relative;
     text-align: center;
   }
 
+       #Creditos {
+  animation-play-state: paused;
+  position: relative;
+  animation: Texto 1.1s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+    text-align: center;
+  }
+
    #TerminosYCondiciones {
   position: relative;
   animation: CositasMas 1.2s;
@@ -704,6 +713,7 @@ function saltarIntroduccion() {
     document.getElementById("Libro1").style.animationPlayState = "running";
 document.getElementById("Empezar").style.animationPlayState = "running";
         document.getElementById("Texto").style.animationPlayState = "running";
+               document.getElementById("Creditos").style.animationPlayState = "running";
           document.getElementById("TerminosYCondiciones").style.animationPlayState = "running";
     document.getElementById("PoliticaDePrivacidad").style.animationPlayState = "running";
        
