@@ -14,13 +14,6 @@ animation-duration: 5s;
       }
 
 
-       #Contenedor {
- margin: 0;
-  padding: 0;
-object-position: center;
-
-       }
-
   #Introduccion {
 object-fit: cover;
   position: absolute;
@@ -430,6 +423,7 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 
 </style>
 </head>
+
 <body>
        
 
@@ -441,7 +435,6 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 <video autoplay muted loop playsinline webkit-playsinline id="Empezar" class="Empezar" onclick="mentePrint()">
   <source src="PrintEmpezar0001-0057.mp4" type="video/mp4">
 </video>
-
 
 <p id="Letrero"> Este es el único libro que recuperó Print. </p>
 
@@ -760,9 +753,6 @@ botonCerrar.addEventListener('click', function() {
 
 
 function saltarIntroduccion() {
-
-    document.getElementById("myVideo").style.height = "100%";
-    document.getElementById("myVideo").style.width = "100%";
 
     document.getElementById("Introduccion").style.animationPlayState = "running";
     document.getElementById("saltar").style.animationPlayState = "running";
