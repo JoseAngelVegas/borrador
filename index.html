@@ -25,7 +25,7 @@ animation-duration: 5s;
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
         }
 
         .spinner {
@@ -85,6 +85,11 @@ object-fit: cover;
 }
 
 #EspacioPv {
+  display: grid;
+  gap: 0px;
+}
+
+#EspacioCreditos {
   display: grid;
   gap: 0px;
 }
@@ -600,6 +605,9 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 
 </div>
 
+<div id="EspacioBiologia">
+
+
 <p class="Texto" id="Creditos" onclick="Creditos()"> Créditos </p>
 
 <p class="Creditos"> Creado por José Ángel Vegas </p>
@@ -615,6 +623,9 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 <p class="Creditos"> Braulio </p>
 
 <p class="Creditos"> Bodrigo </p>
+
+</div>
+
 
 
 <div id="EspacioTyC">
@@ -1115,7 +1126,7 @@ document.getElementById("Creditos").style.animationFillMode = "both";
        
 function Creditos() {
 
-       document.getElementById("EspacioPv").style.gap = "20px";
+       document.getElementById("EspacioCreditos").style.gap = "20px";
    
 
 document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
