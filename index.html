@@ -607,11 +607,14 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 </div>
 
 <div id="EspacioCreditos">
+       
 
 
 <p class="Texto" id="Creditos" onclick="Creditos()"> Créditos </p>
 
 <p class="Creditos"> Creado por José Ángel Vegas </p>
+
+<div id="EspacioCreditos2">
 
 <p class="Creditos"> Gracias especiales a </p>
 
@@ -625,6 +628,7 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 
 <p class="Creditos"> Bodrigo </p>
 
+</div>
 </div>
 
 
@@ -932,6 +936,9 @@ document.getElementById("reset").style.visibility = "hidden";
        
        
  function cerrar() {
+        
+       document.getElementById("EspacioCreditos").style.gap = "0px";
+       document.getElementById("EspacioCreditos2").style.gap = "0px";
 
                  document.getElementById("BotonesEspacio").style.gap = "0px";
 
@@ -1128,6 +1135,8 @@ document.getElementById("Creditos").style.animationFillMode = "both";
 function Creditos() {
 
        document.getElementById("EspacioCreditos").style.gap = "20px";
+              document.getElementById("EspacioCreditos2").style.gap = "20px";
+
    
 
 document.getElementById("PoliticaDePrivacidad").style.animation = "CositasMasSalto";
