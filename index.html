@@ -13,7 +13,7 @@ animation-name: videoDeFondo;
 animation-duration: 5s;
       }
 
-        #loader-wrapper {
+       #loader-wrapper {
             position: fixed;
             top: 0;
             left: 0;
@@ -25,7 +25,7 @@ animation-duration: 5s;
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            transition: opacity 0.8s ease, visibility 0.6s ease;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
 
         .spinner {
@@ -38,7 +38,20 @@ animation-duration: 5s;
         }
 
 
-
+ #Introduccion {
+object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  object-position: center;
+  animation: SaltarIntroduccion 0.1s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  margin: 0;
+  padding: 0;
+}      
       
 
        #EspacioBiologia {
@@ -389,6 +402,10 @@ border: 1px solid rgba(255, 2, 2, 0.1);
 </head>
 
 <body>
+
+<div id="loader-wrapper">
+        <div class="spinner"></div>
+    </div>
        
 
 <p class="Texto" id="Texto"> Algo pasa por la mente de Print. Click en él para entrar a su mente. </p>
